@@ -1,0 +1,332 @@
+.fixed {
+    z-index: 1001;
+}
+
+body {
+    font-size: 120% !important;
+}
+
+.left-off-canvas-menu,
+.right-off-canvas-menu,
+.tags {
+  display: none;
+}
+
+.top-bar:before, .lt-ie9 .top-bar:after {
+  content: " ";
+  display: table;
+}
+.top-bar:after { clear: both; }
+.show-for-small-only { display: none; }
+.show-for-medium-only { display: none; }
+.top-bar .title-area { float: left; }
+.top-bar .name h1 a { width: auto; }
+.top-bar input,
+.top-bar .button {
+  line-height: 2em;
+  font-size: 0.875em;
+  height: 2em;
+  padding: 0 10px;
+  position: relative;
+  top: 8px;
+}
+
+.no-js .top-bar-right {
+  float: right;
+  margin-bottom: 1em;
+  padding-right: 10px;
+}
+
+LI.current-menu-item.menu-item a {
+  background: transparent !important;
+  border-bottom: 1px solid #999999;
+}
+
+.menu-item-has-children a:hover ~ .no-js .menu.dropdown UL {
+  display: block !important;
+}
+
+.footer .row, .fa {
+  padding: 5px;
+}
+.top-bar.expanded { background: #111111; }
+.contain-to-grid .top-bar {
+   background: #ffffff;
+  *zoom: 1;
+  overflow: visible;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+}
+.top-bar-section {
+  -webkit-transition: none 0 0;
+          transition: none 0 0;
+  left: 0 !important;
+}
+.top-bar-section ul {
+  width: auto;
+  height: auto !important;
+  display: table;
+ margin: 0 auto;
+}
+.top-bar-section ul li {float: left; }
+.top-bar-section ul li > a { padding-right: 14px !important; }
+.top-bar-section ul li .js-generated { display:none; }
+.top-bar-section li a:not(.button) {
+  padding: 0 15px;
+  line-height: 45px;
+  background: #ffffff;
+}
+.top-bar-section li a:not(.button):hover { background: #fafafa; }
+.top-bar-section .has-dropdown > a { padding-right: 35px !important; }
+.top-bar-section .has-dropdown > a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid 5px;
+  border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
+  margin-top: -2.5px;
+}
+.top-bar-section .has-dropdown.moved { position: relative; }
+.top-bar-section .has-dropdown.moved > .dropdown { visibility: hidden; }
+.top-bar-section .has-dropdown:hover > .dropdown,
+.top-bar-section .has-dropdown:active > .dropdown { visibility: visible; }
+.top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
+  border: none;
+  content: "\00bb";
+  margin-top: -7px;
+  right: 5px;
+}
+.top-bar-section .dropdown {
+  left: 0;
+  top: auto;
+  background: transparent;
+}
+.top-bar-section .dropdown li a {
+  line-height: 1;
+  white-space: nowrap;
+  padding: 7px 15px;
+  background:;
+}
+.top-bar-section .dropdown li label {
+  white-space: nowrap;
+  background:;
+}
+.top-bar-section .dropdown li .dropdown {
+  left: 100%;
+  top: 0;
+}
+.top-bar-section > ul > .divider {
+  border-bottom: none;
+  border-top: none;
+  border-right: solid 1px #2b2b2b;
+  border-left: solid 1px black;
+  clear: none;
+  height: 45px;
+  width: 0px;
+}
+.top-bar-section .has-form {
+  background: #111111;
+  padding: 0 15px;
+  height: 45px;
+}
+.top-bar-section ul.right li .dropdown {
+  left: auto;
+  right: 0;
+}
+.top-bar-section ul.right li .dropdown li .dropdown { right: 100%; }
+
+/* The Grid ---------------------- */
+.row { width: 940px; max-width: 100%; min-width: 768px; margin: 0 auto; }
+.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
+.row.large-collapse .column,
+.row.large-collapse .columns { padding: 0; }
+.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
+.row .row.large-collapse { margin: 0; }
+
+.column, .columns { float: left; min-height: 1px; padding: 10px 15px; position: relative; margin-top: 0px; margin-bottom: 0px; }
+.column.large-centered, .columns.large-centered { float: none; margin: 0 auto; }
+
+.lt-ie9 [class*="column"] + [class*="column"]:last-child { float: right; }
+.lt-ie9 [class*="column"] + [class*="column"].end { float: left; }
+
+.large-1,
+.row .large-1 { width: 8.33333%; }
+
+.large-2,
+.row .large-2 { width: 16.66667%; }
+
+.large-3,
+.large-3.medium-6.small-12.columns,
+.row .large-3 { width: 25%; }
+
+.large-4,
+.large-4.medium-12.columns,
+.large-4.medium-4.small-12.columns,
+.row .large-4 { width: 33.33333%; }
+
+.columns.small-12 {
+    margin-left: 0px !important;
+}
+
+.columns.small-12.first {
+    margin-left: 5% !important;
+}
+
+.large-5,
+.row .large-5 { width: 41.66667%; }
+
+.large-6,
+.columns.small-12,
+.row .large-6
+{ width: 50%;
+float: left; }
+
+.lt-ie9 #latestPosts h4 {
+    width: 35%;
+    float: left;
+}
+
+.lt-ie9 #latestPosts p {
+    width: 65%;
+    height: 200px;
+    float: left;
+}
+
+.large-7,
+.row .large-7 { width: 58.33333%; }
+
+.large-8,
+.large-8.medium-12.columns,
+.large-8.medium-8.small-12.columns,
+.row .large-8 { width: 66.66667%; }
+
+.large-9,
+.row .large-9 { width: 75%; }
+
+.large-10,
+.row .large-10 { width: 83.33333%; }
+
+.large-11,
+.row .large-11 { width: 91.66667%; }
+
+.large-12,
+.carousel,
+.slick-slide,
+.row .large-12 { width: 100%; }
+
+.no-js .carousel {
+  margin-top: 160px;
+  height: 400px !important;
+}
+
+.no-js .header {
+  z-index: 1001 !important;
+}
+
+.no-js .slick-slide {
+  height: 400px;
+}
+
+.no-js .carousel article {
+  width: 80%;
+}
+
+.no-js #content {
+  margin-top:17em !important;
+}
+
+.no-js .researcher-links {
+  height: 150px !important;
+}
+
+.no-js .site-text h1 {
+  padding: 3.5em 5em !important;
+}
+
+.home article {
+  filter: none;
+}
+
+.no-js .share-links {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.no-js .button {
+  font-size: .9em;
+}
+
+#searchsubmit {
+    margin-top: 0.5em;
+}
+
+.tab-bar h3,
+#scrollAlert,
+.exit-off-canvas,
+.left-off-canvas-menu,
+.tab-bar,
+h1.title,
+h1.title-mob
+{
+    display: none;
+}
+
+h1.site-title {
+    font-size:24px;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    margin-right: 0px;
+}
+
+
+.no-js .carousel article {
+    background:white;
+    zoom: 1;
+    margin-top: 8em;
+}
+
+.no-js .home article {
+    padding: 2em !important;
+}
+
+.home article p {
+    line-height: 2em !important;
+}
+
+.latestNews IMG {
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.latestNews h6 {
+    font-size: 100% !important;
+}
+
+.home-page-title {
+    font-size: 140% !important;
+}
+
+.home #homeAside {
+    margin-top: 0px !important;
+}
+
+nav#footerfix li a {
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+.dropdown {
+  display: block;
+}
+.has-dropdown>a:after {
+   display: none !important;
+}
+
+
+/* Nicolas Gallagher's micro clearfix */
+.lt-ie9 .row { *zoom: 1; }
+.lt-ie9 .row:before, .row:after { content: " "; display: table; }
+.lt-ie9 .row:after { clear: both; }
