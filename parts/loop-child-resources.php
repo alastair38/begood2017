@@ -15,17 +15,17 @@ $parent = new WP_Query( $args );
 if ( $parent->have_posts() ) : ?>
 
 		<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
-				<div id="parent-<?php the_ID(); ?>" class="resources-links">
+				<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
+					<header class="article-header">
+						<h2 class="news_title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 
-						<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-
-
-							<?php
-							the_excerpt();
-							?>
-
-
-				</div>
+						<?php the_post_thumbnail('thumb'); ?>
+					</header>
+					<section class="child-content" itemprop="articleBody">
+						<?php the_excerpt(); ?>
+					</section>
+				<?php get_template_part( 'parts/content', 'share' ); ?>
+				</article>
 
 		<?php endwhile; ?>
 

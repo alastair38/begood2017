@@ -11,8 +11,8 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 	if ( is_page_template( 'page-projects.php' ) && $post->post_parent ) {
 		 get_template_part( 'parts/loop', 'child-pages' );
 
-	//check if we're on a general page and whether it has child pages. If so, loop through child pages
-	} else if ( is_page()  && count( $children ) > 0 ) {
+	//check if we're on a general page, whether it has child pages and it's not a YPAG Blog page. If so, loop through child pages
+} else if ( is_page()  && count( $children ) > 0 && !is_page_template( 'page-ypag.php') ) {
 	get_template_part( 'parts/loop', 'child-pages' );
 
 	//check if we're a single resource page and that this is not the previous meetings resource page. If so, loop through any children
@@ -26,34 +26,23 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 
 			<h3><a href="<?php the_permalink($post->post_parent); ?>" title="<?php echo get_the_title($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></h3>
 			<?php
-			echo get_the_excerpt($post->post_parent);
+			echo '<p>' . get_the_excerpt($post->post_parent) .'</p>';
 			?>
-
-
-
 	</div>
 <?php }
 
-	//check if we're a single resource page and that this is the previous meetings resource page.
-} else if ( is_singular('resources') && is_page_template( 'previous-meetings.php') ) {
+	//check if we're on a YPAG Blog page.
+} else if ( is_page_template( 'page-ypag.php') ) {
 
-	//if above condition true, check for a parent page and link to this if true
-	if($post->post_parent ){
-	?>
+	//if above condition true, check for a parent page and link to this
 	
-	<div id="parent-<?php the_ID(); ?>" class="resources-links">
 
-			<h3><a href="<?php the_permalink($post->post_parent); ?>" title="<?php the_title($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></h3>
+	get_template_part( 'parts/loop', 'siblings' );
 
-				<?php
-				echo get_the_excerpt($post->post_parent);
-				?>
-
-	</div>
-	<?php }
-
+//check if we're on a project page.
 } else if ( is_page_template( 'page-projects.php' ) ) {
 
+//if true, get the list of project staff
 	$post_objects = get_field('project_staff');
 
 	if( $post_objects ) {
@@ -65,20 +54,20 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 								echo get_the_post_thumbnail($post_object->ID, array(100, 100), array( 'class' => 'large-4 show-for-large columns' ));
 
 							?>
-							<p class="large-8 columns">
+
 								<?php
 								the_field('project_description', $post_object->ID);
 								?>
-							</p>
+
 	        </div>
 	    <?php endforeach;
 		} else {
 				get_template_part( 'parts/loop', 'posts' );
 			}
-
+//check if we're on the main BeGOOD blog page or a tag archive page.
 } else if ( is_home() || is_tag()) {
 
-	$tags = get_tags();
+$tags = get_tags();
 $html = '<aside class="columns" role="complementary"><div class="latest_posts"><h5>Blog Categories</h5>';
 foreach ( $tags as $tag ) {
 $tag_link = get_tag_link( $tag->term_id );
@@ -88,7 +77,7 @@ $html .= "{$tag->name}</a> <span>[{$tag->count}]</span></h6>";
 }
 $html .= '</div></aside>';
 echo $html;
-
+//check if we're on the a news archive page, an individual news page or a content_type archive page.
 } else if ( is_post_type_archive('news') || is_singular('news') || is_tax('content_type') ) {
 
 echo '<aside class="columns" role="complementary">';
@@ -105,7 +94,7 @@ echo '<aside class="columns" role="complementary">';
 	echo $html;
 	echo '</aside>';
 
-
+//check if we're on the a resources archive page, an individual resource page or a resource_cat archive page.
 }  else if ( is_post_type_archive('resources') || is_singular('resources') || is_tax('resource_cat')) {
 
 	echo '<aside class="columns" role="complementary">';
@@ -120,14 +109,11 @@ echo '<aside class="columns" role="complementary">';
 	$html .= '</div>';
 	echo $html;
 	echo '</aside>';
+//check if we're on an author poage
 } else if (is_author()) {
 	get_template_part( 'parts/loop', 'researcher-links' );
 } else {
-	// get_template_part( 'parts/loop', 'posts' );
-}
+	get_template_part( 'parts/loop', 'siblings' );
+}?>
 
-?>
-<?php if($post->post_parent ) {?>
-
-<?php }?>
 </div>

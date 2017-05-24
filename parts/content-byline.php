@@ -7,7 +7,7 @@
 	</time> by <?php the_author_posts_link();
 
 	 the_terms( $id, 'content_type', ' in ', $sep, $after );
- } else if (is_post_type_archive('resources') || is_singular('resources') || is_tax('resource_cat')){
+ } else if (is_post_type_archive('resources') || is_singular('resources') || is_page() || is_tax('resource_cat')){
 	the_terms( $id, 'resource_cat', ' in ', $sep, $after );
 	$meetingDate = get_field('meeting_date');
 			if($meetingDate) {

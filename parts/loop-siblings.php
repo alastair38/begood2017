@@ -1,37 +1,41 @@
 <?php
-	$parentObj = get_post( $post->post_parent );
- ?>
 
-<div id="parent" class="home-links">
+if($post->post_parent ){
+?>
 
-		 <h3><a href="<?php the_permalink($parentObj->ID) ?>"><?php echo get_the_title($parentObj->ID); ?></a></h3>
-		 <?php
-		 $content = $parentObj->post_content;
-		 echo wp_trim_words($content, 20);?>
-	 </div>
+<div id="parent-<?php the_ID(); ?>" class="resources-links">
 
-<?php
+		<h3><a href="<?php the_permalink($post->post_parent); ?>" title="<?php the_title($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></h3>
+
+			<?php
+			echo get_the_excerpt($post->post_parent);
+			?>
+
+</div>
+<?php }
 
 $args = array(
-'child_of'     => $parentObj->ID,
-'post_type' => 'page',
-'exclude' => $post->ID,
-'order' => DESC
+	'sort_order' => 'asc',
+	'sort_column' => 'menu_order',
+	'hierarchical' => 1,
+	'exclude' => $post->ID,
+	'include' => '',
+	'meta_key' => '',
+	'meta_value' => '',
+	'authors' => '',
+	'child_of' => $post->post_parent,
+	'parent' => $post->post_parent,
+	'exclude_tree' => '',
+	'number' => '',
+	'offset' => 0,
+	'post_type' => 'page',
+	'post_status' => 'publish'
 );
+$pages = get_pages($args);
+foreach ($pages as $page) {
+	echo '<div class="resources-links"><h3><a href="' . get_page_link( $page->ID ) .'">' . $page->post_title . '</a></h3><p>' . $page->post_excerpt . '
 
-	$mypages = get_pages( array( 'child_of' => $parentObj->ID, 'exclude' => $post->ID ) );
+	</p></div>';
+}
 
-	foreach( $mypages as $page ) {
-		$content = $page->post_content;
-		if ( ! $content ) // Check for empty page
-			continue;
-
-		$content = apply_filters( 'the_content', $content );
-	?>
-	<div id="parent-<?php the_ID(); ?>" class="home-links">
-		<h3><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h3>
-		<div class="entry"><?php echo wp_trim_words($content, 5); ?></div>
-	</div>
-	<?php
-	}
 ?>

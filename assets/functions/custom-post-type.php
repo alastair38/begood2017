@@ -36,6 +36,7 @@ function custom_post_example() {
 			'description' => __( 'This is the resource custom post type', 'jointswp' ), /* Resource Description */
 			'public' => true,
 			'publicly_queryable' => true,
+			'show_in_rest' => true,
 			'exclude_from_search' => false,
 			'show_ui' => true,
 			'query_var' => true,
@@ -83,6 +84,7 @@ function custom_post_example() {
     		),
     		'show_admin_column' => true,
     		'show_ui' => true,
+				'show_in_rest' => true,
     		'query_var' => true,
     		'rewrite' => array( 'slug' => 'resource-category' ),
     	)

@@ -23,11 +23,11 @@ if ( $parent->have_posts() ) : ?>
 							the_post_thumbnail(array(100, 100), array( 'class' => 'large-4 show-for-large columns' ));
 
 						?>
-						<p class="large-8 columns">
+
 							<?php
 							the_field('project_description');
 							?>
-						</p>
+					
 
 				</div>
 

@@ -18,7 +18,7 @@ function site_scripts() {
     }
 
 
-    if (is_singular('resources')) {
+    if (is_page('forthcoming-meetings')) {
         wp_enqueue_script( 'addtocalendar-js', get_template_directory_uri() . '/assets/js/calendar.js', array( 'jquery' ), '', true );
         wp_enqueue_style( 'addtocalendar', 'http://addtocalendar.com/atc/1.5/atc-style-blue.css');
   }

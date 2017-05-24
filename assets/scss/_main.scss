@@ -190,26 +190,21 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-
 }
 
 h2, .h2 {
-
 }
 
 h3, .h3 {
-
 }
 
 h4, .h4 {
-
 }
 
 h5, .h5 {
-
 }
 
-.archive h2, .blog h2 {
+.archive h2, .blog h2, .page-template-page-ypag h2 {
   font-size: 1.9375rem;
 }
 
@@ -371,7 +366,11 @@ li.menu-item.current-menu-item a {
   }
 }
 
-li#logout {
+.btn-floating i {
+  font-size: 1.25rem !important;
+}
+
+span#logout {
   &:hover, &:focus {
     a {
       color: $dark-gray;

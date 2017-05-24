@@ -70,36 +70,36 @@ if (!current_user_can('administrator') && !is_admin()) {
 }
 }
 
-add_filter( 'wp_nav_menu_items', 'add_login_link', 10, 2);
+//add_filter( 'wp_nav_menu_items', 'add_login_link', 10, 2);
 /**
  * Add a login/logout link, edit profile and add new articles etc links for logged in users
  */
-function add_login_link( $items, $args )
-{
-    if($args->theme_location == 'main-nav')
-    {
-        if (!is_user_logged_in())
-        {
-            $items .= '<li id="login" class="waves-effect waves-light"><a href="'. wp_login_url() .'"><i class="fa fa-sign-in"></i> Log In</a></li>';
-        }
-    }
-    return $items;
-}
-
-
-add_filter( 'wp_nav_menu_items', 'add_social_links', 10, 2);
-
-function add_social_links( $items, $args )
-{
-    if($args->theme_location == 'main-nav')
-    {
-        if ( is_user_logged_in())
-        {
-						$items .= '<li id="logout" class="waves-effect waves-light"><a href="'. wp_logout_url(home_url()) .'"><i class="fa fa-sign-out"></i>Log Out</a></li>';
-        }
-    }
-    return $items;
-}
+// function add_login_link( $items, $args )
+// {
+//     if($args->theme_location == 'main-nav')
+//     {
+//         if (!is_user_logged_in())
+//         {
+//             $items .= '<li id="login" class="waves-effect waves-light"><a href="'. wp_login_url() .'"><i class="fa fa-sign-in"></i> Log In</a></li>';
+//         }
+//     }
+//     return $items;
+// }
+//
+//
+// add_filter( 'wp_nav_menu_items', 'add_social_links', 10, 2);
+//
+// function add_social_links( $items, $args )
+// {
+//     if($args->theme_location == 'main-nav')
+//     {
+//         if ( is_user_logged_in())
+//         {
+// 						$items .= '<li id="logout" class="waves-effect waves-light"><a href="'. wp_logout_url(home_url()) .'"><i class="fa fa-sign-out"></i>Log Out</a></li>';
+//         }
+//     }
+//     return $items;
+// }
 
 /**
  * WordPress function for redirecting users on login based on user role

@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php get_header();
+
+require_once(ABSPATH . 'wp-admin/includes/media.php');
+require_once(ABSPATH . 'wp-admin/includes/file.php');
+require_once(ABSPATH . 'wp-admin/includes/image.php');
+?>
 
 <div id="content">
 
@@ -6,6 +11,8 @@
 
 		<?php if(is_singular('post')) {?>
 			<main id="main" class="large-12 medium-12 columns" role="main">
+
+
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
