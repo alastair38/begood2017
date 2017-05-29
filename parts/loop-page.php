@@ -61,17 +61,7 @@
 							echo ' at ' . $address;
 						}?>
 
- 					<span aria-hidden="true" class=" addtocalendar atc-style-blue">
- 					<var class="atc_event">
- 					<var class="atc_date_start"><?php the_sub_field('upcoming_meeting_date');?></var>
- 					<var class="atc_date_end"><?php the_sub_field('upcoming_meeting_date');?></var>
- 					<var class="atc_timezone">Europe/London</var>
- 					<var class="atc_title"><?php the_sub_field('upcoming_meeting_title');?></var>
- 					<var class="atc_description"><?php the_sub_field('upcoming_meeting_description');?></var>
- 					<var class="atc_location"><?php the_sub_field('upcoming_meeting_address');?></var>
- 					<var class="atc_organizer_email"><?php the_sub_field('upcoming_meeting_contact');?></var>
- 					</var>
- 					</span></label>
+ 					</label>
 
  							<?php $description = get_sub_field('upcoming_meeting_description');
 							if ($description) {
