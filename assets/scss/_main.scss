@@ -428,6 +428,197 @@ li.menu-button {
 	}
 }
 
+/************************
+GAME LANDING PAGES Styles
+************************/
+
+.page-template-page-game {
+  background: #444;
+  color: white;
+  article {
+    padding-top: 4rem;
+  }
+  form {
+    height: auto;
+    margin-bottom: 3rem;
+  }
+  .list-radio-wrap .nf-field-element li input[type="radio"] {
+    width: 0 !important;
+    height: 0;
+  	visibility: hidden;
+  }
+  [type="button"] {
+  	background: #54FFFF;
+  	color: #444;
+    border: none;
+  	transition: 350ms;
+    padding: 1rem;
+    filter: grayscale(1);
+    &:hover, &:focus {
+      filter: grayscale(0);
+    }
+  }
+  .stars {
+  	display: none;
+  }
+  #game-content {
+    font-family: 'Quicksand', 'Questrial', sans-serif;
+    width: 90%;
+    @include breakpoint(large) {
+        width: 60%;
+  	}
+    margin: auto;
+    text-align: center;
+    h1 {
+      font-family: inherit;
+      border-bottom: none;
+      padding: 2rem 0;
+    }
+    #bar {
+    background: #333439;
+    width: 90%;
+    margin: 0 auto 2rem;
+    height: 80px;
+    @include breakpoint(medium) {
+      height: 100px;
+    }
+    position: relative;
+      img {
+
+      height: 100px;
+      width: 100px;
+      @include breakpoint(medium) {
+        height: 120px;
+        width: 120px;
+        left: calc(50% - 60px);
+      }
+      position: absolute;
+      top: -10px;
+      left: calc(50% - 50px);
+      border-radius: 50%;
+      box-shadow: 0px 0px 2px 8px rgba(0, 0, 7, 0.2);
+      }
+    }
+    #request-msg, #post-form {
+      font-size: 1.25rem;
+    }
+    #info-links {
+    	display: grid;
+      grid-template-columns: 1fr;
+      @include breakpoint(medium) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+    	grid-gap: 1rem;
+    	padding-top: 2rem;
+      li {
+        display: flex;
+      }
+      li a {
+        display: inline-block;
+        background: url(/wp-content/themes/begood2017/assets/images/game/act3scene3_2.png) no-repeat;
+        background-size: 100% 100%;
+        padding: 2rem 2rem 4rem 2rem;
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        filter:hue-rotate(8deg);
+        &:hover {
+          filter:hue-rotate(0deg);
+        }
+      }
+    }
+    .starrating {
+     	direction: rtl;
+       display: inline-block;
+       padding: 20px;
+       input {
+        display: inline-block !important;
+        background: url(/wp-content/themes/begood2017/assets/images/game/star-24px.svg) center no-repeat;
+       	background-size: contain;
+        float: none;
+        -webkit-appearance: none;
+       	width: 45px !important;
+       	height: 45px;
+        @include breakpoint(medium) {
+          width: 90px !important;
+          height: 90px;
+      	}
+       	border: none;
+        filter: grayscale(1);
+        padding: 0;
+        cursor: pointer;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        margin-right: 0;
+       }
+       input[type=radio]:checked,
+       input:hover,
+       input:hover ~ input,
+       input[type=radio]:checked ~ input {
+           filter: grayscale(0);
+       }
+   }
+  }
+  .off-canvas-content {
+    background: #444;
+  }
+  .header, .footer{
+    visibility: hidden;
+  }
+
+
+///form stylings
+
+
+.nf-response-msg p {
+  margin: 100px auto;
+  padding: 1rem;
+  width: 50%;
+  background: #54FFFF;
+  color: #444;
+}
+
+[type="checkbox"] + label, [type="radio"] + label {
+  margin-right: 0;
+}
+
+[type="radio"]+label:before,
+[type="radio"]+label:after {
+ display: none;
+}
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+ position:relative;
+ left:0px;
+ visibility:visible;
+}
+
+#average_rating {
+  color: #54ffff;
+  width: 100%;
+  text-align: center;
+  span {
+    display: block;
+  }
+  #text {
+    padding: .5rem 0;
+    font-size: .9rem;
+  }
+  #rating {
+    width: 70px;
+    height: 70px;
+    line-height: calc(70px - .75rem);
+    margin: auto;
+    border-radius: 50%;
+    border: 5px solid #54ffff;
+    font-size: 1.5rem;
+  }
+}
+
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/

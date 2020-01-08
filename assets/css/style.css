@@ -3806,6 +3806,155 @@ li.menu-button {
   .off-canvas-list ul .dropdown {
     margin-left: 20px; }
 
+/************************
+GAME LANDING PAGES Styles
+************************/
+.page-template-page-game {
+  background: #444;
+  color: white; }
+  .page-template-page-game article {
+    padding-top: 4rem; }
+  .page-template-page-game form {
+    height: auto;
+    margin-bottom: 3rem; }
+  .page-template-page-game .list-radio-wrap .nf-field-element li input[type="radio"] {
+    width: 0 !important;
+    height: 0;
+    visibility: hidden; }
+  .page-template-page-game [type="button"] {
+    background: #54FFFF;
+    color: #444;
+    border: none;
+    transition: 350ms;
+    padding: 1rem;
+    filter: grayscale(1); }
+    .page-template-page-game [type="button"]:hover, .page-template-page-game [type="button"]:focus {
+      filter: grayscale(0); }
+  .page-template-page-game .stars {
+    display: none; }
+  .page-template-page-game #game-content {
+    font-family: 'Quicksand', 'Questrial', sans-serif;
+    width: 90%;
+    margin: auto;
+    text-align: center; }
+    @media screen and (min-width: 62.5em) {
+      .page-template-page-game #game-content {
+        width: 60%; } }
+    .page-template-page-game #game-content h1 {
+      font-family: inherit;
+      border-bottom: none;
+      padding: 2rem 0; }
+    .page-template-page-game #game-content #bar {
+      background: #333439;
+      width: 90%;
+      margin: 0 auto 2rem;
+      height: 80px;
+      position: relative; }
+      @media screen and (min-width: 32em) {
+        .page-template-page-game #game-content #bar {
+          height: 100px; } }
+      .page-template-page-game #game-content #bar img {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: -10px;
+        left: calc(50% - 50px);
+        border-radius: 50%;
+        box-shadow: 0px 0px 2px 8px rgba(0, 0, 7, 0.2); }
+        @media screen and (min-width: 32em) {
+          .page-template-page-game #game-content #bar img {
+            height: 120px;
+            width: 120px;
+            left: calc(50% - 60px); } }
+    .page-template-page-game #game-content #request-msg, .page-template-page-game #game-content #post-form {
+      font-size: 1.25rem; }
+    .page-template-page-game #game-content #info-links {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      padding-top: 2rem; }
+      @media screen and (min-width: 32em) {
+        .page-template-page-game #game-content #info-links {
+          grid-template-columns: repeat(3, 1fr); } }
+      .page-template-page-game #game-content #info-links li {
+        display: flex; }
+      .page-template-page-game #game-content #info-links li a {
+        display: inline-block;
+        background: url(/wp-content/themes/begood2017/assets/images/game/act3scene3_2.png) no-repeat;
+        background-size: 100% 100%;
+        padding: 2rem 2rem 4rem 2rem;
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        filter: hue-rotate(8deg); }
+        .page-template-page-game #game-content #info-links li a:hover {
+          filter: hue-rotate(0deg); }
+    .page-template-page-game #game-content .starrating {
+      direction: rtl;
+      display: inline-block;
+      padding: 20px; }
+      .page-template-page-game #game-content .starrating input {
+        display: inline-block !important;
+        background: url(/wp-content/themes/begood2017/assets/images/game/star-24px.svg) center no-repeat;
+        background-size: contain;
+        float: none;
+        -webkit-appearance: none;
+        width: 45px !important;
+        height: 45px;
+        border: none;
+        filter: grayscale(1);
+        padding: 0;
+        cursor: pointer;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        margin-right: 0; }
+        @media screen and (min-width: 32em) {
+          .page-template-page-game #game-content .starrating input {
+            width: 90px !important;
+            height: 90px; } }
+      .page-template-page-game #game-content .starrating input[type=radio]:checked,
+      .page-template-page-game #game-content .starrating input:hover,
+      .page-template-page-game #game-content .starrating input:hover ~ input,
+      .page-template-page-game #game-content .starrating input[type=radio]:checked ~ input {
+        filter: grayscale(0); }
+  .page-template-page-game .off-canvas-content {
+    background: #444; }
+  .page-template-page-game .header, .page-template-page-game .footer {
+    visibility: hidden; }
+  .page-template-page-game .nf-response-msg p {
+    margin: 100px auto;
+    padding: 1rem;
+    width: 50%;
+    background: #54FFFF;
+    color: #444; }
+  .page-template-page-game [type="checkbox"] + label, .page-template-page-game [type="radio"] + label {
+    margin-right: 0; }
+  .page-template-page-game [type="radio"] + label:before,
+  .page-template-page-game [type="radio"] + label:after {
+    display: none; }
+  .page-template-page-game [type="radio"]:not(:checked),
+  .page-template-page-game [type="radio"]:checked {
+    position: relative;
+    left: 0px;
+    visibility: visible; }
+  .page-template-page-game #average_rating {
+    color: #54ffff;
+    width: 100%;
+    text-align: center; }
+    .page-template-page-game #average_rating span {
+      display: block; }
+    .page-template-page-game #average_rating #text {
+      padding: .5rem 0;
+      font-size: .9rem; }
+    .page-template-page-game #average_rating #rating {
+      width: 70px;
+      height: 70px;
+      line-height: calc(70px - .75rem);
+      margin: auto;
+      border-radius: 50%;
+      border: 5px solid #54ffff;
+      font-size: 1.5rem; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/

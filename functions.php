@@ -65,3 +65,26 @@ function begood_add_excerpt_support_for_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 add_action( 'init', 'begood_add_excerpt_support_for_pages' );
+
+// function to redirect away from Tracing Tomorrow landing page unless the site visitor is coming from the game website (which is defined on the options page).
+add_action( 'template_redirect', 'tracingtomorrow_redirect' );
+function tracingtomorrow_redirect() {
+	$page = get_field('game_page', 'options');
+	$ref_to_match = get_field('referral_page', 'options');
+  $ref = wp_get_referer();
+
+	if($page == null) {
+
+    if (is_page($page) && $ref == $ref_to_match) {
+        //echo 'Its Working Let it Continue';
+    }
+    else if (is_page($page) && $ref !== $ref_to_match){
+			wp_redirect( home_url( ) );
+
+        // Not Working Let's Redirect and exit
+    }
+    else if (!is_page($page)){
+          // echo 'We Don't Need Anything Here';
+    }
+		}
+}

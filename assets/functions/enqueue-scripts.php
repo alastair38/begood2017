@@ -34,7 +34,7 @@ function site_scripts() {
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
 
-    wp_enqueue_style( 'googlefonts', 'http://fonts.googleapis.com/css?family=Questrial');
+    wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css?family=Questrial|Quicksand&display=swap');
 
     wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
