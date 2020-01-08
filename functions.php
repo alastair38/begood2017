@@ -73,7 +73,7 @@ function tracingtomorrow_redirect() {
 	$ref_to_match = get_field('referral_page', 'options');
   $ref = wp_get_referer();
 
-	if($page == null) {
+	if($page != null) {
 
     if (is_page($page) && $ref == $ref_to_match) {
         //echo 'Its Working Let it Continue';
