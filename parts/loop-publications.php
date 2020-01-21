@@ -1,4 +1,4 @@
-<div class="latest_pubs columns">
+<div class="latest_pubs">
 
 	<?php
 
@@ -17,7 +17,7 @@
 
 	$lastpublications = get_posts( $args );
 	if($lastpublications){
-		echo '<h5>Latest Publications</h5>';
+		echo '<h4>Latest Publications</h4>';
 	foreach ( $lastpublications as $post ) :
 		setup_postdata( $post );
 	// 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -26,7 +26,7 @@
 	// 	if ( $eventDate >= $currentDate ) : ?>
 
 	<article>
-		 <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+		 <h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
 		 <span class="byline">
 		 	Published <time
 		     datetime="<?php the_time('Y-m-d') ?>"
@@ -35,7 +35,7 @@
 		     </time>
 		 </span>
 		 <?php  $content = get_the_content();
-			echo wp_trim_words($content, 5);?>
+			//echo wp_trim_words($content, 5);?>
 	</article>
 	<?php
 

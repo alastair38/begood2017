@@ -7,7 +7,7 @@
 	$items = get_field('items_to_show'); // set the values in the edit screen for the home page
 	$args = array(
 		'posts_per_page' => $items,
-		'post_type' => $post_type,
+		'post_type' => 'post',
 		// 'meta_key'=>'event_date',
 		// 'orderby' => 'meta_value',
 		'order' => DESC

@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="" role="article" itemscope itemtype="http://schema.org/WebPage">
+<article id="post-<?php the_ID(); ?>" class="large-9 columns" role="article" itemscope itemtype="http://schema.org/WebPage">
 
 	<header class="article-headercolumns">
 		<?php edit_post_link('Edit Page', '<span class="edit_link wave-effect waves-light">', '</span>'); ?>
@@ -16,25 +16,6 @@
 			<?php
 	     the_content(); ?>
 			 <?php
-
-			$subpages = get_field('subpages');
-			if( $subpages ): ?>
-		<aside>
-			<ul id="subpages-list" class="row">
-			<?php foreach( $subpages as $post): // variable must be called $post (IMPORTANT) ?>
-					<?php setup_postdata($post); ?>
-
-					<li class="subpage large-4 medium-6 columns">
-							<a href="<?php the_permalink(); ?>">
-							 <h2><?php the_title(); ?></h2>
-						 </a>
-					</li>
-			<?php endforeach; ?>
-			</ul>
-		</aside>
-		<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif;
-
 			 if ( get_field('publications')) {
 				 echo '<h4>Publications</h4>';
 				 the_field('publications');
@@ -115,8 +96,42 @@
 	    <?php wp_link_pages(); ?>
 	</section> <!-- end article section -->
 
-	<footer class="article-footer">
 
-	</footer> <!-- end article footer -->
 
 </article> <!-- end article -->
+
+<div class="profile-img large-3 columns">
+	<figure>
+		<?php the_post_thumbnail('large');?>
+
+		<figcaption>
+			<span id="profile-title"><?php the_title();?></span>
+
+			<?php $affiliation = get_field('affiliation');
+			if ($affiliation):?>
+			<span id="profile-affiliation"><?php echo $affiliation;?></span>
+			<?php endif;?>
+
+		</figcaption>
+
+	</figure>
+	<?php
+
+ $subpages = get_field('subpages');
+ if( $subpages ): ?>
+<aside>
+ <ul id="profile-pages" class="row">
+ <?php foreach( $subpages as $post): // variable must be called $post (IMPORTANT) ?>
+		 <?php setup_postdata($post); ?>
+
+		 <li class="subpage">
+				 <a href="<?php the_permalink(); ?>">
+					<h2><?php the_title(); ?></h2>
+				</a>
+		 </li>
+ <?php endforeach; ?>
+ </ul>
+</aside>
+<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+<?php endif;?>
+</div>

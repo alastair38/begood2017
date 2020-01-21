@@ -3983,7 +3983,11 @@ POSTS & CONTENT STYLES
     text-align: center;
     background: #e6e6e6; }
 
-.latest_posts h5, .latest_pubs h5, .latest_links h5 {
+.latest_tweets h4 {
+  text-align: center;
+  background: #e6e6e6; }
+
+.latest_posts h4, .latest_pubs h4, .latest_links h4 {
   text-align: center;
   background: #e6e6e6; }
 .latest_posts article, .latest_pubs article, .latest_links article {
@@ -3999,17 +4003,11 @@ POSTS & CONTENT STYLES
 .latest_videos article {
   padding: 1em; }
 
-.twitter_wrap {
+.twitter_wrap h5 {
   text-align: center;
-  margin-top: 2em; }
-
-#latest_tweets {
-  background: #fefefe;
-  padding: 1em 0;
-  border: 2px solid #e6e6e6;
-  margin-bottom: 1em; }
-  #latest_tweets h5 {
-    display: inline-block; }
+  background: #e6e6e6; }
+.twitter_wrap .ctf-author-name {
+  margin-left: 0 !important; }
 
 .single-title,
 .page-title {
@@ -4164,6 +4162,59 @@ i.fa.fa-external-link {
     background: #3b4d55;
     color: #fff; }
 
+.team-grid li.container {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  height: 300px; }
+  @media screen and (min-width: 62.5em) {
+    .team-grid li.container {
+      height: 400px; } }
+  .team-grid li.container a {
+    display: block; }
+
+.overlay {
+  position: absolute;
+  bottom: 0rem;
+  top: 200px;
+  left: 2rem;
+  right: 2rem;
+  transform: translateY(0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #262156ba;
+  overflow: hidden;
+  text-align: center;
+  transition: .5s ease; }
+  @media screen and (min-width: 62.5em) {
+    .overlay {
+      top: 2rem;
+      transform: translateY(100%); } }
+  .overlay h2 {
+    font-size: 1.25rem; }
+
+.container:hover .overlay {
+  transform: translateY(0%); }
+
+.container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; }
+  @media screen and (min-width: 62.5em) {
+    .container img {
+      height: 400px; } }
+
+.profile-img figure {
+  margin: 0; }
+  .profile-img figure img {
+    width: 100%;
+    margin-top: 1.5rem; }
+
+#profile-title {
+  display: block; }
+
 #projects {
   background: #CFD8DC; }
 
@@ -4176,6 +4227,41 @@ i.fa.fa-external-link {
   .fixed-action-btn.horizontal ul li a {
     color: #fefefe;
     padding: 0 10px; }
+
+#profile-pages {
+  padding: 1rem 0; }
+  #profile-pages .subpage {
+    padding: .5rem 1rem; }
+    #profile-pages .subpage a {
+      display: flex;
+      background: #1f88b4;
+      color: #fefefe;
+      padding: 0.5rem 1rem;
+      align-items: center;
+      border-radius: 3px; }
+      #profile-pages .subpage a:hover h2, #profile-pages .subpage a:focus h2 {
+        color: #CFD8DC; }
+      #profile-pages .subpage a h2 {
+        font-size: 1.5rem;
+        transition: 350ms;
+        margin-bottom: 0; }
+
+#subpages-list .subpage {
+  padding: 1rem; }
+  #subpages-list .subpage a {
+    display: flex;
+    background: #1f88b4;
+    color: #fefefe;
+    padding: 1rem;
+    align-items: center;
+    height: 10rem; }
+    #subpages-list .subpage a:hover h2, #subpages-list .subpage a:focus h2 {
+      color: #CFD8DC;
+      border-bottom: 1px solid #fefefe; }
+    #subpages-list .subpage a h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid transparent;
+      transition: 350ms; }
 
 .home-links, .about-links, .researcher-links, #sidebar1 .resources-links {
   background: #1f88b4;
@@ -4212,6 +4298,11 @@ i.fa.fa-external-link {
 
 .home .home-links {
   height: 200px; }
+
+.home h2 {
+  font-size: 1.75rem; }
+.home h4 {
+  font-size: 1.5rem; }
 
 @media screen and (min-width: 62.5em) {
   #sidebar1 .resources-links {
@@ -4300,24 +4391,26 @@ i.fa.fa-external-link {
     position: absolute;
     font-size: .75em;
     background: rgba(255, 255, 255, 0.9);
-    bottom: .5rem;
+    bottom: 2rem;
     left: 10%;
-    padding: 10px;
+    padding: .5rem 2rem;
+    border-radius: 3px;
     max-width: 80%; }
-    .carousel article h3 {
-      font-size: 1rem; }
+    .carousel article h2 {
+      font-size: 1rem;
+      margin-bottom: 0; }
     @media screen and (min-width: 32em) {
       .carousel article {
         font-size: 1em;
         bottom: 2rem; }
-        .carousel article h3 {
+        .carousel article h2 {
           font-size: 1.5rem; } }
     @media screen and (min-width: 62.5em) {
       .carousel article {
         left: 5%;
         max-width: 90%;
         font-size: 1em; }
-        .carousel article h3 {
+        .carousel article h2 {
           font-size: 1.75rem; } }
 
 button.slick-next.slick-arrow {
