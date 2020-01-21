@@ -428,6 +428,8 @@ li.menu-button {
 	}
 }
 
+
+
 /************************
 GAME LANDING PAGES Styles
 ************************/
@@ -661,8 +663,15 @@ POSTS & CONTENT STYLES
 
 }
 
+.latest_tweets {
+  h4 {
+    text-align: center;
+    background: $light-gray;
+  }
+}
+
 .latest_posts, .latest_pubs, .latest_links {
-  h5 {
+  h4 {
     text-align: center;
     background: $light-gray;
   }
@@ -688,18 +697,13 @@ POSTS & CONTENT STYLES
 }
 
 .twitter_wrap {
-  text-align: center;
-  margin-top: 2em;
-}
-
-#latest_tweets {
-  background: $white;
-  padding: 1em 0;
-  border: 2px solid $light-gray;
-  margin-bottom: 1em;
   h5 {
-      display: inline-block;
-    }
+  text-align: center;
+  background: $light-gray;
+  }
+  .ctf-author-name {
+    margin-left: 0 !important;
+  }
 }
 
 .single-title,
@@ -891,6 +895,75 @@ i.fa.fa-external-link {
 	@include button;
 }
 
+// Team Grid Page STYLES
+
+.team-grid {
+  li.container {
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    @include breakpoint(large) {
+      height: 400px;
+    }
+    a {
+      display: block;
+    }
+  }
+}
+.overlay {
+  position: absolute;
+  bottom: 0rem;
+  top: 200px;
+  left: 2rem;
+  right: 2rem;
+  transform: translateY(0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #262156ba;
+  overflow: hidden;
+  text-align: center;
+  transition: .5s ease;
+@include breakpoint(large) {
+  top: 2rem;
+  transform: translateY(100%);
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+.container:hover .overlay {
+transform: translateY(0%);
+}
+
+.container img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+@include breakpoint(large) {
+  height: 400px;
+}
+}
+
+/// Individual Profile PAGES
+
+.profile-img {
+  figure {
+    margin: 0;
+    img {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+#profile-title {
+  display: block;
+}
+
 #projects {
   background: $secondary-color;
 }
@@ -905,6 +978,55 @@ i.fa.fa-external-link {
   li a {
     color: $white;
     padding: 0 10px;
+  }
+}
+
+#profile-pages {
+  padding: 1rem 0;
+  .subpage {
+  	padding: .5rem 1rem;
+    a {
+      display: flex;
+      background: $highlight-color;
+      color: #fefefe;
+      padding: 0.5rem 1rem;
+      align-items: center;
+      border-radius: 3px;
+      //height: 10rem;
+      &:hover, &:focus {
+        h2 {
+          color: #CFD8DC;
+        }
+      }
+      h2 {
+        font-size: 1.5rem;
+        transition: 350ms;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+#subpages-list .subpage {
+	padding: 1rem;
+  a {
+    display: flex;
+    background: $highlight-color;
+    color: #fefefe;
+    padding: 1rem;
+    align-items: center;
+    height: 10rem;
+    &:hover, &:focus {
+      h2 {
+        color: #CFD8DC;
+        border-bottom: 1px solid #fefefe;
+      }
+    }
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid transparent;
+      transition: 350ms;
+    }
   }
 }
 
@@ -952,6 +1074,15 @@ i.fa.fa-external-link {
 
 .home .home-links {
   height: 200px;
+}
+
+.home {
+  h2 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
 }
 
 #sidebar1 .resources-links {
@@ -1069,17 +1200,19 @@ i.fa.fa-external-link {
     position: absolute;
     font-size: .75em;
     background: rgba(255,255,255,.9);
-    bottom: .5rem;
+    bottom: 2rem;
     left: 10%;
-    padding: 10px;
+    padding: .5rem 2rem;
+    border-radius: 3px;
     max-width: 80%;
-    h3 {
+    h2 {
       font-size: 1rem;
+      margin-bottom: 0;
     }
     @include breakpoint(medium) {
     font-size: 1em;
     bottom: 2rem;
-    h3 {
+    h2 {
       font-size: 1.5rem;
     }
     }
@@ -1087,7 +1220,7 @@ i.fa.fa-external-link {
     left: 5%;
     max-width: 90%;
     font-size: 1em;
-    h3 {
+    h2 {
       font-size: 1.75rem;
     }
     }

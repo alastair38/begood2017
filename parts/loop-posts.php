@@ -1,8 +1,8 @@
-<div class="latest_posts columns">
+<div class="latest_posts">
 
 	<?php
 	$args = array(
-		'posts_per_page' => 3,
+		'posts_per_page' => 5,
 		'post_type' => 'post',
 		'exclude' => $post->ID,
 		// 'meta_key'=>'event_date',
@@ -11,7 +11,7 @@
 	);
 
 	$lastposts = get_posts( $args );
-	echo '<h5>The Blog</h5>';
+	echo '<h4>The Blog</h4>';
 	foreach ( $lastposts as $post ) :
 		setup_postdata( $post );
 	// 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -20,8 +20,7 @@
 	// 	if ( $eventDate >= $currentDate ) : ?>
 
 		 <article>
-			 <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-			 <?php the_post_thumbnail(array(50, 50));?>
+			 <h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
 			 <span class="byline">
 			 	Published <time
 			     datetime="<?php the_time('Y-m-d') ?>"
@@ -29,9 +28,6 @@
 			     <?=time_ago(get_the_time( 'U' ))?>
 			     </time>
 			 </span>
-			 <?php
-			 $content = get_the_content();
-			 echo wp_trim_words($content, 25);?>
 		 </article>
 
 	<?php
