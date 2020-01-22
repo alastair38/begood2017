@@ -342,8 +342,8 @@ ul#menu-main-1 {
 }
 
 .top-bar-right img {
-  margin-top: 59px;
-  height: 49px;
+  margin-top: calc(50% - 40px);
+  height: 80px;
   padding-left: 10px;
 }
 
@@ -501,8 +501,12 @@ GAME LANDING PAGES Styles
       box-shadow: 0px 0px 2px 8px rgba(0, 0, 7, 0.2);
       }
     }
-    #request-msg, #post-form {
+    #request-msg, #post-form, p {
       font-size: 1.25rem;
+    }
+    #content-block {
+      text-align: left;
+      padding-top: 2rem;
     }
     #info-links {
     	display: grid;
@@ -532,8 +536,8 @@ GAME LANDING PAGES Styles
     }
     .starrating {
      	direction: rtl;
-       display: inline-block;
-       padding: 20px;
+      display: inline-block;
+      padding: 20px;
        input {
         display: inline-block !important;
         background: url(/wp-content/themes/begood2017/assets/images/game/star-24px.svg) center no-repeat;

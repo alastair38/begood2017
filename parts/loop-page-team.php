@@ -18,7 +18,7 @@
     <?php foreach( $members as $post): // variable must be called $post (IMPORTANT) ?>
         <?php setup_postdata($post); ?>
 
-        <li class="container large-4 medium-6 columns">
+        <li class="container large-4 medium-6 columns end">
             <a href="<?php the_permalink(); ?>">
 							<?php the_post_thumbnail('large');?>
 							<div class="overlay">

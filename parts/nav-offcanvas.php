@@ -17,8 +17,8 @@
 		</ul>
 	</div>
 	<div class="top-bar-right show-for-large">
-		<img class="" src="<?php echo get_template_directory_uri() . '/assets/images/wellcome_trust.jpg';?>">
-		<img class="" src="<?php echo get_template_directory_uri() . '/assets/images/University_of_Oxford.png';?>">
+		<img class="" src="<?php echo get_template_directory_uri() . '/assets/images/wellcome-logo-black.gif';?>">
+		<img class="" src="<?php echo get_template_directory_uri() . '/assets/images/ox_brand1_pos.gif';?>">
 
 		<?php joints_footer_links(); ?>
 	</div>

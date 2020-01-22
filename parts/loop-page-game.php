@@ -18,7 +18,6 @@
 
 	    echo do_shortcode( ' [ninja_form id="' . get_field('form_id') . '"] ' );
 
-			//the_content();
 
 			echo '<p id="post-form">' . get_field('post_form_text') . '</p>';
 
@@ -48,6 +47,10 @@ else :
 
 endif;
 
+	echo '<div id="content-block">';
+		the_content();
+	echo '</div>';
+
 $show_rating = get_field('show_average_rating');
 
 if($show_rating) {
@@ -70,8 +73,6 @@ if($show_rating) {
 }
 
 			 ?>
-
-	    <?php wp_link_pages(); ?>
 
 			<script>
 //

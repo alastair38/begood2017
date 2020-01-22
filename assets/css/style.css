@@ -3747,8 +3747,8 @@ ul#menu-main-1 {
   transform: rotate(90deg); }
 
 .top-bar-right img {
-  margin-top: 59px;
-  height: 49px;
+  margin-top: calc(50% - 40px);
+  height: 80px;
   padding-left: 10px; }
 
 li.menu-item a {
@@ -3866,8 +3866,11 @@ GAME LANDING PAGES Styles
             height: 120px;
             width: 120px;
             left: calc(50% - 60px); } }
-    .page-template-page-game #game-content #request-msg, .page-template-page-game #game-content #post-form {
+    .page-template-page-game #game-content #request-msg, .page-template-page-game #game-content #post-form, .page-template-page-game #game-content p {
       font-size: 1.25rem; }
+    .page-template-page-game #game-content #content-block {
+      text-align: left;
+      padding-top: 2rem; }
     .page-template-page-game #game-content #info-links {
       display: grid;
       grid-template-columns: 1fr;
