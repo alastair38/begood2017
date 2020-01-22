@@ -9,7 +9,7 @@
 		</header>
 		<section class="entry-content" itemprop="articleBody">
 			<?php the_excerpt(); ?>
-			<a class="button" href="<?php echo $eventInfo; ?>" target="_blank" rel="bookmark" title="<?php the_title_attribute(); ?> - This takes you to an external website">More Details <i class="fa fa-external-link"></i></a>
+			<a class="button" href="<?php echo $eventInfo; ?>" target="_blank" rel="bookmark" title="<?php the_title_attribute(); ?> - This takes you to an external website">More Details</a>
 		</section> <!-- end article section -->
 		<?php get_template_part( 'parts/content', 'share-news' ); ?>
 		<?php } else {?>

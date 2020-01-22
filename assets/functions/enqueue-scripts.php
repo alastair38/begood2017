@@ -36,7 +36,7 @@ function site_scripts() {
 
     wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css?family=Questrial|Quicksand&display=swap');
 
-    wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+    wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
 
     wp_enqueue_style( 'materialize', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css');
 

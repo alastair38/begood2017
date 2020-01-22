@@ -7,8 +7,8 @@ jQuery(document).ready(function() {
     autoplaySpeed: 5000,
     fade: true,
     cssEase: 'linear',
-    prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
-    nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>'
+    prevArrow: '<button type="button" class="slick-prev"><i class="material-icons medium">chevron_left</i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="material-icons medium">chevron_right</i></button>'
   });
 
 });

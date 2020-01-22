@@ -3462,6 +3462,9 @@ body {
 .slick-arrow.slick-hidden {
   display: none; }
 
+.slick-arrow i {
+  color: white; }
+
 /************************************************
 
 Stylesheet: Main Stylesheet
@@ -3736,8 +3739,8 @@ ul#menu-main-1 {
     width: 100%; }
 
 .is-dropdown-submenu-parent:after {
-  content: '\f105';
-  font-family: "Fontawesome";
+  content: '\e5cc';
+  font-family: "Material Icons";
   position: absolute;
   top: .45em;
   right: 0px;
@@ -4657,8 +4660,17 @@ FOOTER STYLES
   background: #f6f6f6;
   margin-top: 1em;
   padding: 1em 0 0em 0; }
+  .footer a {
+    display: inline-block; }
+    .footer a:hover svg, .footer a:focus svg {
+      fill: #3b4d56; }
+  .footer svg {
+    margin: 0 .25rem;
+    float: left;
+    fill: #1f88b4; }
   .footer i {
-    padding: 0 .25rem; }
+    padding: 0 .25rem;
+    margin-right: 0 !important; }
 
 /*********************
 FOUNDATION STYLES
