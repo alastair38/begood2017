@@ -3825,8 +3825,8 @@ GAME LANDING PAGES Styles
     height: 0;
     visibility: hidden; }
   .page-template-page-game [type="button"] {
-    background: #54FFFF;
-    color: #444;
+    background: #54FFFF !important;
+    color: #444 !important;
     border: none;
     transition: 350ms;
     padding: 1rem;

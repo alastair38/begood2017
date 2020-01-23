@@ -24,7 +24,7 @@
 			<?php foreach( $subpages as $post): // variable must be called $post (IMPORTANT) ?>
 					<?php setup_postdata($post); ?>
 
-					<li class="subpage large-4 medium-6 columns">
+					<li class="subpage large-4 medium-6 columns end">
 							<a href="<?php the_permalink(); ?>">
 							 <h2><?php the_title(); ?></h2>
 						 </a>

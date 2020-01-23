@@ -116,7 +116,7 @@ if($show_rating) {
 
 
 
-elms = document.getElementsByName('nf-field-7');
+elms = document.getElementsByName('nf-field-5');
 //submit = document.getElementById('nf-field-6');
 //request = document.getElementById('request-msg');
 
