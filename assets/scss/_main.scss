@@ -215,6 +215,12 @@ HEADER STYLES
 .off-canvas-content {
   box-shadow: none !important;
 }
+
+.logos-mobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -466,6 +472,12 @@ GAME LANDING PAGES Styles
   #game-content {
     font-family: 'Quicksand', 'Questrial', sans-serif;
     width: 90%;
+    a {
+      color: #03A9F4;
+      &:hover, &:focus {
+        color: #54FFFF;
+      }
+    }
     @include breakpoint(large) {
         width: 60%;
   	}
@@ -918,9 +930,10 @@ i.fa.fa-external-link {
 .overlay {
   position: absolute;
   bottom: 0rem;
-  top: 200px;
+  top: auto;
   left: 2rem;
   right: 2rem;
+  padding: .5rem;
   transform: translateY(0%);
   display: flex;
   align-items: center;
@@ -930,12 +943,16 @@ i.fa.fa-external-link {
   overflow: hidden;
   text-align: center;
   transition: .5s ease;
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
 @include breakpoint(large) {
   top: 2rem;
   transform: translateY(100%);
-  }
   h2 {
     font-size: 1.25rem;
+  }
   }
 }
 
@@ -1187,6 +1204,54 @@ object-fit: cover;
   display: none;
 }
 
+/*********************
+CAROUSEL STYLES
+*********************/
+
+.slick-dots {
+    position: absolute;
+    bottom: -45px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    background: $light-gray;
+}
+
+.slick-dots li.slick-active button {
+    background: $highlight-color;
+}
+
 .carousel {
   position: relative;
   height: 200px;
@@ -1204,11 +1269,14 @@ object-fit: cover;
     position: absolute;
     font-size: .75em;
     background: rgba(255,255,255,.9);
-    bottom: 2rem;
+    bottom: 1rem;
     left: 10%;
     padding: .5rem 2rem;
     border-radius: 3px;
     max-width: 80%;
+    @include breakpoint(large) {
+    bottom: 2rem;
+    }
     h2 {
       font-size: 1rem;
       margin-bottom: 0;
@@ -1216,19 +1284,18 @@ object-fit: cover;
     @include breakpoint(medium) {
     font-size: 1em;
     bottom: 2rem;
-    h2 {
-      font-size: 1.5rem;
-    }
+      h2 {
+        font-size: 1.5rem;
+      }
     }
     @include breakpoint(large) {
     left: 5%;
     max-width: 90%;
     font-size: 1em;
-    h2 {
-      font-size: 1.75rem;
+      h2 {
+        font-size: 1.75rem;
+      }
     }
-    }
-
   }
 }
 
@@ -1242,11 +1309,10 @@ button.slick-next.slick-arrow {
   &:hover {
     background: rgba(0,0,0,.15);
   }
-  .fa {
+  i.medium {
     color: $highlight-color;
     font-size: 2em;
     margin: auto;
-    padding: 0 5px;
     @include breakpoint(medium) {
     font-size: 4em;
     }
@@ -1263,11 +1329,10 @@ button.slick-prev.slick-arrow {
   &:hover {
     background: rgba(0,0,0,.15);
   }
-  .fa {
+  i.medium {
     color: $highlight-color;
     font-size: 2em;
     margin: auto;
-    padding: 0 5px;
     @include breakpoint(medium) {
     font-size: 4em;
     }
@@ -1276,14 +1341,6 @@ button.slick-prev.slick-arrow {
 }
 
 
-
-#content .rotatingtweets {
-  border: none;
-}
-
-.rotatingtweet .rtw_main { padding: 10px; background: whitesmoke;}
-
-.rotatingtweet .rtw_meta {padding: 10px;}
 
 /*********************
 SHARE LINK STYLES
@@ -1301,59 +1358,6 @@ ul.share-links {
   }
 }
 
-
-/*********************
-CAROUSEL STYLES
-*********************/
-
-.slick-dots
-{
-    position: absolute;
-    bottom: -45px;
-
-    display: block;
-
-    width: 100%;
-    padding: 0;
-    margin-left: 0;
-
-    list-style: none;
-
-    text-align: center;
-}
-.slick-dots li
-{
-    position: relative;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    border-radius: 50%;
-    padding: 0;
-    cursor: pointer;
-}
-.slick-dots li button
-{
-    font-size: 0;
-    line-height: 0;
-
-    display: block;
-
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    padding: 5px;
-    cursor: pointer;
-    border: 0;
-    outline: none;
-    background: $light-gray;
-
-    }
-
-    .slick-dots li.slick-active button
-    {
-      background: $highlight-color;
-    }
 
 /*********************
 IMAGE GALLERY STYLES

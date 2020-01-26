@@ -16,6 +16,12 @@
 
         echo '<meta name="robots" content="noindex,nofollow">';
     }
+
+    if ( is_page_template( 'page-tracing.php' ) ) {
+
+        echo '<meta name="robots" content="noindex,nofollow">';
+    }
+
     ?>
 
 		<!-- If Site Icon isn't set in customizer -->

@@ -41,7 +41,7 @@ Template Name: Home
 	</aside>
 
 	<aside class="large-12 medium-12 columns" role="complementary">
-		<div class="large-4 small-12 columns" role="complementary">
+		<div class="large-4 small-12 columns">
 
 		<?php get_template_part( 'parts/loop', 'posts' );
 
@@ -49,7 +49,7 @@ Template Name: Home
 	</div>
 
 
-	<div class="large-4 small-12 columns" role="complementary">
+	<div class="large-4 small-12 columns">
 
 	<?php get_template_part( 'parts/loop', 'publications' ); ?>
 </div>

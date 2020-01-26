@@ -28,7 +28,7 @@ if( have_rows('front_page_carousel') ):
 						 }
 
 						 if($caption) {
-							 echo esc_html( $caption );
+							 echo '<span class="show-for-medium">' . esc_html( $caption ) . '</span>';
 						 }
 						 ?>
 					 </article>

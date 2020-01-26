@@ -3659,6 +3659,10 @@ HEADER STYLES
 .off-canvas-content {
   box-shadow: none !important; }
 
+.logos-mobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
 .header {
   position: fixed;
   top: 0;
@@ -3840,6 +3844,10 @@ GAME LANDING PAGES Styles
     width: 90%;
     margin: auto;
     text-align: center; }
+    .page-template-page-game #game-content a {
+      color: #03A9F4; }
+      .page-template-page-game #game-content a:hover, .page-template-page-game #game-content a:focus {
+        color: #54FFFF; }
     @media screen and (min-width: 62.5em) {
       .page-template-page-game #game-content {
         width: 60%; } }
@@ -4182,9 +4190,10 @@ i.fa.fa-external-link {
 .overlay {
   position: absolute;
   bottom: 0rem;
-  top: 200px;
+  top: auto;
   left: 2rem;
   right: 2rem;
+  padding: .5rem;
   transform: translateY(0%);
   display: flex;
   align-items: center;
@@ -4194,12 +4203,15 @@ i.fa.fa-external-link {
   overflow: hidden;
   text-align: center;
   transition: .5s ease; }
+  .overlay h2 {
+    font-size: 1rem;
+    margin-bottom: 0; }
   @media screen and (min-width: 62.5em) {
     .overlay {
       top: 2rem;
-      transform: translateY(100%); } }
-  .overlay h2 {
-    font-size: 1.25rem; }
+      transform: translateY(100%); }
+      .overlay h2 {
+        font-size: 1.25rem; } }
 
 .container:hover .overlay {
   transform: translateY(0%); }
@@ -4381,104 +4393,6 @@ i.fa.fa-external-link {
 .archive hr:last-of-type {
   display: none; }
 
-.carousel {
-  position: relative;
-  height: 200px;
-  background: teal; }
-  @media screen and (min-width: 32em) {
-    .carousel {
-      height: 300px; } }
-  @media screen and (min-width: 62.5em) {
-    .carousel {
-      height: 400px; } }
-  .carousel div {
-    height: 100%; }
-  .carousel article {
-    position: absolute;
-    font-size: .75em;
-    background: rgba(255, 255, 255, 0.9);
-    bottom: 2rem;
-    left: 10%;
-    padding: .5rem 2rem;
-    border-radius: 3px;
-    max-width: 80%; }
-    .carousel article h2 {
-      font-size: 1rem;
-      margin-bottom: 0; }
-    @media screen and (min-width: 32em) {
-      .carousel article {
-        font-size: 1em;
-        bottom: 2rem; }
-        .carousel article h2 {
-          font-size: 1.5rem; } }
-    @media screen and (min-width: 62.5em) {
-      .carousel article {
-        left: 5%;
-        max-width: 90%;
-        font-size: 1em; }
-        .carousel article h2 {
-          font-size: 1.75rem; } }
-
-button.slick-next.slick-arrow {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.15);
-  transition: 350ms; }
-  button.slick-next.slick-arrow:hover {
-    background: rgba(0, 0, 0, 0.15); }
-  button.slick-next.slick-arrow .fa {
-    color: #1f88b4;
-    font-size: 2em;
-    margin: auto;
-    padding: 0 5px; }
-    @media screen and (min-width: 32em) {
-      button.slick-next.slick-arrow .fa {
-        font-size: 4em; } }
-
-button.slick-prev.slick-arrow {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.15);
-  transition: 350ms;
-  z-index: 10; }
-  button.slick-prev.slick-arrow:hover {
-    background: rgba(0, 0, 0, 0.15); }
-  button.slick-prev.slick-arrow .fa {
-    color: #1f88b4;
-    font-size: 2em;
-    margin: auto;
-    padding: 0 5px; }
-    @media screen and (min-width: 32em) {
-      button.slick-prev.slick-arrow .fa {
-        font-size: 4em; } }
-
-#content .rotatingtweets {
-  border: none; }
-
-.rotatingtweet .rtw_main {
-  padding: 10px;
-  background: whitesmoke; }
-
-.rotatingtweet .rtw_meta {
-  padding: 10px; }
-
-/*********************
-SHARE LINK STYLES
-*********************/
-ul.share-links {
-  background: #e6e6e6;
-  text-align: center;
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: 0; }
-  ul.share-links li {
-    display: inline-table;
-    padding-right: 1em; }
-
 /*********************
 CAROUSEL STYLES
 *********************/
@@ -4517,6 +4431,95 @@ CAROUSEL STYLES
 
 .slick-dots li.slick-active button {
   background: #1f88b4; }
+
+.carousel {
+  position: relative;
+  height: 200px;
+  background: teal; }
+  @media screen and (min-width: 32em) {
+    .carousel {
+      height: 300px; } }
+  @media screen and (min-width: 62.5em) {
+    .carousel {
+      height: 400px; } }
+  .carousel div {
+    height: 100%; }
+  .carousel article {
+    position: absolute;
+    font-size: .75em;
+    background: rgba(255, 255, 255, 0.9);
+    bottom: 1rem;
+    left: 10%;
+    padding: .5rem 2rem;
+    border-radius: 3px;
+    max-width: 80%; }
+    @media screen and (min-width: 62.5em) {
+      .carousel article {
+        bottom: 2rem; } }
+    .carousel article h2 {
+      font-size: 1rem;
+      margin-bottom: 0; }
+    @media screen and (min-width: 32em) {
+      .carousel article {
+        font-size: 1em;
+        bottom: 2rem; }
+        .carousel article h2 {
+          font-size: 1.5rem; } }
+    @media screen and (min-width: 62.5em) {
+      .carousel article {
+        left: 5%;
+        max-width: 90%;
+        font-size: 1em; }
+        .carousel article h2 {
+          font-size: 1.75rem; } }
+
+button.slick-next.slick-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transition: 350ms; }
+  button.slick-next.slick-arrow:hover {
+    background: rgba(0, 0, 0, 0.15); }
+  button.slick-next.slick-arrow i.medium {
+    color: #1f88b4;
+    font-size: 2em;
+    margin: auto; }
+    @media screen and (min-width: 32em) {
+      button.slick-next.slick-arrow i.medium {
+        font-size: 4em; } }
+
+button.slick-prev.slick-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transition: 350ms;
+  z-index: 10; }
+  button.slick-prev.slick-arrow:hover {
+    background: rgba(0, 0, 0, 0.15); }
+  button.slick-prev.slick-arrow i.medium {
+    color: #1f88b4;
+    font-size: 2em;
+    margin: auto; }
+    @media screen and (min-width: 32em) {
+      button.slick-prev.slick-arrow i.medium {
+        font-size: 4em; } }
+
+/*********************
+SHARE LINK STYLES
+*********************/
+ul.share-links {
+  background: #e6e6e6;
+  text-align: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0; }
+  ul.share-links li {
+    display: inline-table;
+    padding-right: 1em; }
 
 /*********************
 IMAGE GALLERY STYLES
