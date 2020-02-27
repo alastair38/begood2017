@@ -7,7 +7,7 @@
 		'exclude' => $post->ID,
 		// 'meta_key'=>'event_date',
 		// 'orderby' => 'meta_value',
-		'order' => DESC
+		'order' => 'DESC'
 	);
 
 	$lastposts = get_posts( $args );
@@ -22,11 +22,11 @@
 		 <article>
 			 <h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
 			 <span class="byline">
-			 	Published <time
+			 	<!-- Published <time
 			     datetime="<?php the_time('Y-m-d') ?>"
 			     title="<?php the_time('F j, Y') ?>">
 			     <?=time_ago(get_the_time( 'U' ))?>
-			     </time>
+			     </time> -->
 			 </span>
 		 </article>
 
