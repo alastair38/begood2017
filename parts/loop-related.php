@@ -6,7 +6,7 @@
 	'post_type' => 'post',
 	'exclude' => $post->ID,
 	'category_name' => $parentObj->post_name,
-	'order' => DESC
+	'order' => 'DESC'
 );
 
 $relatedposts = get_posts( $args );
@@ -25,7 +25,7 @@ foreach ( $relatedposts as $post ) :
 			Published <time
 				 datetime="<?php the_time('Y-m-d') ?>"
 				 title="<?php the_time('F j, Y') ?>">
-				 <?=time_ago(get_the_time( 'U' ))?>
+				 <?php the_time('F j, Y') ?>
 				 </time>
 		 </p>
 		 <?php
@@ -45,7 +45,7 @@ wp_reset_postdata();
 	'post_type' => 'post',
 	'exclude' => $post->ID,
 	'category_name' => $post->post_name,
-	'order' => DESC
+	'order' => 'DESC'
 );
 
 $relatedposts = get_posts( $args );
@@ -66,7 +66,7 @@ foreach ( $relatedposts as $post ) :
 			Published <time
 				 datetime="<?php the_time('Y-m-d') ?>"
 				 title="<?php the_time('F j, Y') ?>">
-				 <?=time_ago(get_the_time( 'U' ))?>
+				<?php the_time('F j, Y') ?>
 				 </time>
 		 </p>
 		 <?php

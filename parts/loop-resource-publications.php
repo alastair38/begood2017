@@ -16,7 +16,7 @@
 					'terms' => 'publication'
 				)
 	),
-		'order' => DESC
+		'order' => 'DESC'
 	);
 
 	$lastpublications = get_posts( $args );
@@ -36,7 +36,7 @@
 		 	Published <time
 		     datetime="<?php the_time('Y-m-d') ?>"
 		     title="<?php the_time('F j, Y') ?>">
-		     <?=time_ago(get_the_time( 'U' ))?>
+		     <?php the_time('F j, Y') ?>
 		     </time>
 		 </p>
 		 <?php  $content = get_the_content();

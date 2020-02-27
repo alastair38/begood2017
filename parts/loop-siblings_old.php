@@ -16,7 +16,7 @@ $args = array(
 'child_of'     => $parentObj->ID,
 'post_type' => 'page',
 'exclude' => $post->ID,
-'order' => DESC
+'order' => 'DESC'
 );
 
 	$mypages = get_pages( array( 'child_of' => $parentObj->ID, 'exclude' => $post->ID ) );

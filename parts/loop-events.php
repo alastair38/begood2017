@@ -6,7 +6,7 @@
 		'post_type' => 'post',
 		// 'meta_key'=>'event_date',
 		// 'orderby' => 'meta_value',
-		'order' => ASC
+		'order' => 'ASC'
 	);
 
 	$lastposts = get_posts( $args );

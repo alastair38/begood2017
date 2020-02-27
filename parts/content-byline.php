@@ -3,7 +3,7 @@
 	Published <time
     datetime="<?php the_time('Y-m-d') ?>"
     title="<?php the_time('F j, Y') ?>">
-    <?=time_ago(get_the_time( 'U' ))?>
+    <?php the_time('F j, Y') ?>
 	</time> by <?php the_author_posts_link();
 
 	 the_terms( $id, 'content_type', ' in ', $sep, $after );

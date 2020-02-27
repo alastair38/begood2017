@@ -2,7 +2,7 @@
 	Published <time
     datetime="<?php the_time('Y-m-d') ?>"
     title="<?php the_time('F j, Y') ?>">
-    <?=time_ago(get_the_time( 'U' ))?>
+    <?php the_time('F j, Y') ?>
 	</time> in
 	<?php if (is_post_type_archive('news') || is_singular('news') || is_tax('content_type')){
 	 the_terms( $id, 'content_type', $before, $sep, $after );

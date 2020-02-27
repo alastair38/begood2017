@@ -11,7 +11,7 @@
 					'terms' => 'video'
 				)
 	),
-		'order' => DESC
+		'order' => 'DESC'
 	);
 
 	$lastvideos = get_posts( $args );
@@ -31,7 +31,8 @@
 		 	Published <time
 		     datetime="<?php the_time('Y-m-d') ?>"
 		     title="<?php the_time('F j, Y') ?>">
-		     <?=time_ago(get_the_time( 'U' ))?>
+				 <?php the_time('F j, Y') ?>
+
 		     </time>
 		 </p>
 		 <?php the_content();?>
