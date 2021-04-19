@@ -24,7 +24,7 @@
 
 $subpages = get_field('subpages');
 if( $subpages ): ?>
-<aside class="large-4 columns">
+<div class="large-4 columns">
 <ul id="subpages-list">
 <?php foreach( $subpages as $post): // variable must be called $post (IMPORTANT) ?>
 	 <?php setup_postdata($post); ?>
@@ -36,6 +36,6 @@ if( $subpages ): ?>
 	 </li>
 <?php endforeach; ?>
 </ul>
-</aside>
+</div>
 <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif;?>

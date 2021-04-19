@@ -19,7 +19,7 @@
 
 			$subpages = get_field('subpages');
 			if( $subpages ): ?>
-		<aside>
+		<div>
 			<ul id="subpages-list" class="row">
 			<?php foreach( $subpages as $post): // variable must be called $post (IMPORTANT) ?>
 					<?php setup_postdata($post); ?>
@@ -31,7 +31,7 @@
 					</li>
 			<?php endforeach; ?>
 			</ul>
-		</aside>
+		</div>
 		<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif;
 

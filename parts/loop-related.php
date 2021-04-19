@@ -11,7 +11,7 @@
 
 $relatedposts = get_posts( $args );
 if ($relatedposts) {
-	echo '<div class="related_posts columns"><h5>Related Posts</h5>';
+	echo '<div class="related_posts columns"><h2 class="h5">Related Posts</h2>';
 foreach ( $relatedposts as $post ) :
 	setup_postdata( $post );
 // 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -20,7 +20,7 @@ foreach ( $relatedposts as $post ) :
 // 	if ( $eventDate >= $currentDate ) : ?>
 
 	 <article>
-		 <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+		 <h3 class="h4"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 		 <p class="byline">
 			Published <time
 				 datetime="<?php the_time('Y-m-d') ?>"
@@ -50,7 +50,7 @@ wp_reset_postdata();
 
 $relatedposts = get_posts( $args );
 if ($relatedposts) {
-	echo '<div class="related_posts columns"><h5>Related Posts</h5>';
+	echo '<div class="related_posts columns"><h2 class="h5">Related Posts</h2>';
 
 
 foreach ( $relatedposts as $post ) :
@@ -61,7 +61,7 @@ foreach ( $relatedposts as $post ) :
 // 	if ( $eventDate >= $currentDate ) : ?>
 
 	 <article>
-		 <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+		 <h3 class="h4"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3 class="h4>
 		 <p class="byline">
 			Published <time
 				 datetime="<?php the_time('Y-m-d') ?>"

@@ -16,7 +16,7 @@
 
 	$lastlinks = get_posts( $args );
 	if($lastlinks){
-		echo '<h5 class="row">Latest Links</h5>';
+		echo '<h2 class="h5 row">Latest Links</h2>';
 	}
 
 	foreach ( $lastlinks as $post ) :
@@ -27,7 +27,7 @@
 	// 	if ( $eventDate >= $currentDate ) : ?>
 
 	<article class="large-3 medium-4 small-6 columns end">
-		 <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+		 <h3 class="h4"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 		 <p class="byline">
 		 	Published <time
 		     datetime="<?php the_time('Y-m-d') ?>"

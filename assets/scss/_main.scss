@@ -195,13 +195,16 @@ h1, .h1 {
 h2, .h2 {
 }
 
-h3, .h3 {
+.h3 {
+  font-size: 1.9375rem;
 }
 
-h4, .h4 {
+.h4 {
+  font-size: 1.5625rem;
 }
 
-h5, .h5 {
+.h5 {
+  font-size: 1.25rem;
 }
 
 .archive h2, .blog h2, .page-template-page-ypag h2 {
@@ -370,6 +373,10 @@ li.menu-item.current-menu-item a {
   background: transparent;
   border-bottom: 1px solid $highlight-color;
   }
+}
+
+.is-open-right {
+  min-height: 100vh;
 }
 
 .btn-floating i {
@@ -671,7 +678,8 @@ POSTS & CONTENT STYLES
   &.columns {
     border: 1px solid $medium-gray;
     padding: 1rem;
-    h5 {
+    margin: 1rem 0;
+    .h5 {
       text-align: center;
       background: $light-gray;
     }
@@ -680,14 +688,14 @@ POSTS & CONTENT STYLES
 }
 
 .latest_tweets {
-  h4 {
+  .h4 {
     text-align: center;
     background: $light-gray;
   }
 }
 
 .latest_posts, .latest_pubs, .latest_links {
-  h4 {
+  .h4 {
     text-align: center;
     background: $light-gray;
   }
@@ -703,7 +711,7 @@ POSTS & CONTENT STYLES
 }
 
 .latest_videos {
-  h5 {
+  .h5 {
     text-align: center;
     background: $light-gray;
   }
@@ -761,7 +769,7 @@ li.categories {
 
 // Post meta
 .byline {
-	color: #999;
+	color: #222;
 	time {}
 }
 
@@ -807,7 +815,7 @@ i.fa.fa-external-link {
 	}
 }
 
-.home aside.large-12.medium-12.columns {
+.home .aside.large-12.medium-12.columns {
   margin-bottom: 2em;
 }
 
@@ -1057,8 +1065,10 @@ object-fit: cover;
 	position: relative;
 	text-align: right;
 	padding: 0 10px;
-
-	h3 {
+  .researcher_desc, .resources_desc {
+    color: $white;
+  }
+	h3, .h3 {
 		text-transform: uppercase;
 		text-align: right;
 		border-bottom: 1px solid $medium-gray;
@@ -1081,6 +1091,9 @@ object-fit: cover;
 		color: #212121;
 
 	}
+  .snippet {
+    color: $white;
+  }
 	span {
 		position: absolute;
 		left: 0;
@@ -1098,10 +1111,10 @@ object-fit: cover;
 }
 
 .home {
-  h2 {
+  h2, .h2 {
     font-size: 1.75rem;
   }
-  h4 {
+  h4, .h4 {
     font-size: 1.5rem;
   }
 }
@@ -1167,7 +1180,7 @@ object-fit: cover;
   @include breakpoint(medium) {
     height: 150px;
   }
-  h3 {
+  .h3 {
     font-size: 1em;
     @include breakpoint(medium) {
     	font-size: 1.25rem;
@@ -1289,8 +1302,8 @@ CAROUSEL STYLES
       }
     }
     @include breakpoint(large) {
-    left: 5%;
-    max-width: 90%;
+    left: 8%;
+    max-width: 84%;
     font-size: 1em;
       h2 {
         font-size: 1.75rem;
@@ -1304,10 +1317,10 @@ button.slick-next.slick-arrow {
   top: 0;
   bottom: 0;
   right: 0;
-  background: rgba(255,255,255,.15);
+  background: rgba(255,255,255,.35);
   transition: 350ms;
   &:hover {
-    background: rgba(0,0,0,.15);
+    background: rgba(255,255,255,.75);
   }
   i.medium {
     color: $highlight-color;
@@ -1324,10 +1337,10 @@ button.slick-prev.slick-arrow {
   top: 0;
   bottom: 0;
   left: 0;
-  background: rgba(255,255,255,.15);
+  background: rgba(255,255,255,.35);
   transition: 350ms;
   &:hover {
-    background: rgba(0,0,0,.15);
+    background: rgba(255,255,255,.75);
   }
   i.medium {
     color: $highlight-color;
@@ -1692,7 +1705,7 @@ FOOTER STYLES
     }
   }
   svg {
-    margin: 0 .25rem;
+    margin: 0 0.25rem;
     float: left;
     fill: $highlight-color;
   }

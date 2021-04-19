@@ -6,7 +6,7 @@ Template Name: Home
 
 <?php get_header(); ?>
 
-	<div id="content" tabindex="0">
+	<main id="content" tabindex="0">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 			<?php get_template_part( 'parts/content', 'carousel' ); ?>
@@ -16,7 +16,7 @@ Template Name: Home
 
 
 
-		    <main id="main" class="large-12 medium-12 columns" role="main">
+		    <div id="main" class="large-12 medium-12 columns">
 
 					<section class="entry-content large-12 columns" itemprop="articleBody">
 						<?php the_content(); ?>
@@ -29,18 +29,18 @@ Template Name: Home
 
 
 
-			</main> <!-- end #main -->
+		</div> <!-- end #main -->
 
 
-	<aside class="large-12 medium-12 columns" role="complementary">
+	<div class="aside large-12 medium-12 columns">
 		<?php get_template_part( 'parts/loop', 'main-pages' ); ?>
-	</aside>
+	</div>
 
-	<aside class="large-12 medium-12 columns" role="complementary">
+	<div class="aside large-12 medium-12 columns">
 		<?php get_template_part( 'parts/loop', 'sub-pages' ); ?>
-	</aside>
+	</div>
 
-	<aside class="large-12 medium-12 columns" role="complementary">
+	<div class="aside large-12 medium-12 columns">
 		<div class="large-4 small-12 columns">
 
 		<?php get_template_part( 'parts/loop', 'posts' );
@@ -61,13 +61,13 @@ Template Name: Home
 	}?>
 
 </div>
-</aside>
+</div>
 
 
 		</div> <!-- end #inner-content -->
 
 
 
-	</div> <!-- end #content -->
+	</main> <!-- end #content -->
 
 <?php get_footer(); ?>

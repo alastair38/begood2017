@@ -17,7 +17,7 @@
 	     the_content(); ?>
 			 <?php
 			 if ( get_field('publications')) {
-				 echo '<h4>Publications</h4>';
+				 echo '<h2 class="h4">Publications</h2>';
 				 the_field('publications');
 		 }
 
@@ -31,7 +31,7 @@
 
 	if( $images ): ?>
 	<div class="row">
-	 <h5 class="center light">Meeting photos</h5>
+	 <h2 class="h5 center light">Meeting photos</h2>
 		 <?php foreach( $images as $image ): ?>
 				 <div class="small-6 large-4 columns">
 
@@ -50,7 +50,7 @@
  		?>
 
  					<div class="resources-links">
- 					<h3 class="title"><?php the_sub_field('upcoming_meeting_title');?></h3>
+ 					<h2 class="h3 title"><?php the_sub_field('upcoming_meeting_title');?></h2>
  					<label>
 						<i class="fa fa-calendar"></i>
 						<?php $date = get_sub_field('upcoming_meeting_date');
@@ -119,7 +119,7 @@
 
  $subpages = get_field('subpages');
  if( $subpages ): ?>
-<aside>
+<div>
  <ul id="profile-pages" class="row">
  <?php foreach( $subpages as $post): // variable must be called $post (IMPORTANT) ?>
 		 <?php setup_postdata($post); ?>
@@ -131,7 +131,7 @@
 		 </li>
  <?php endforeach; ?>
  </ul>
-</aside>
+</div>
 <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif;?>
 </div>

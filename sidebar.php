@@ -1,4 +1,4 @@
-<div id="sidebar1" class="sidebar large-4 medium-4 columns" role="complementary">
+<div id="sidebar1" class="sidebar large-4 medium-4 columns">
 
 	<?php
 	global $post;
@@ -26,7 +26,7 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 
 			<h3><a href="<?php the_permalink($post->post_parent); ?>" title="<?php echo get_the_title($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></h3>
 			<?php
-			echo '<p>' . get_the_excerpt($post->post_parent) .'</p>';
+			echo '<p class="resources_desc">' . get_the_excerpt($post->post_parent) .'</p>';
 			?>
 	</div>
 <?php }
@@ -35,7 +35,7 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 } else if ( is_page_template( 'page-ypag.php') ) {
 
 	//if above condition true, check for a parent page and link to this
-	
+
 
 	get_template_part( 'parts/loop', 'siblings' );
 
@@ -48,16 +48,17 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 	if( $post_objects ) {
 
 	    		foreach( $post_objects as $post_object): ?>
-	        	<div id="parent-<?php the_ID(); ?>" class="researcher-links">
+	        	<div class="researcher-links">
 	            <h3><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a></h3>
 							<?php
 								echo get_the_post_thumbnail($post_object->ID, array(100, 100), array( 'class' => 'large-4 show-for-large columns' ));
 
 							?>
-
+							<div class="researcher_desc">
 								<?php
 								the_field('project_description', $post_object->ID);
 								?>
+							</div>
 
 	        </div>
 	    <?php endforeach;
@@ -68,47 +69,47 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 } else if ( is_home() || is_tag()) {
 
 $tags = get_tags();
-$html = '<aside class="columns" role="complementary"><div class="latest_posts"><h5>Blog Categories</h5>';
+$html = '<div class="columns"><div class="latest_posts"><h3 class="h5">Blog Categories</h3>';
 foreach ( $tags as $tag ) {
 $tag_link = get_tag_link( $tag->term_id );
 
-$html .= "<h6><a href='{$tag_link}' title='View all content assigned to {$tag->name}' class='{$tag->slug}'>";
-$html .= "{$tag->name}</a> <span>[{$tag->count}]</span></h6>";
+$html .= "<div><a href='{$tag_link}' title='View all content assigned to {$tag->name}' class='{$tag->slug}'>";
+$html .= "{$tag->name}</a> <span>[{$tag->count}]</span></div>";
 }
-$html .= '</div></aside>';
+$html .= '</div></div>';
 echo $html;
 //check if we're on the a news archive page, an individual news page or a content_type archive page.
 } else if ( is_post_type_archive('news') || is_singular('news') || is_tax('content_type') ) {
 
-echo '<aside class="columns" role="complementary">';
+echo '<div class="columns">';
 
 	$terms = get_terms('content_type');
-	$html = '<div class="latest_posts"><h5>Filter News/Events</h5>';
+	$html = '<div class="latest_posts"><h3 class="h5">Filter News/Events</h3>';
 	foreach ( $terms as $term ) {
 	$tag_link = get_tag_link( $term->term_id );
 
-	$html .= "<h6><a href='{$tag_link}' title='View all content assigned to {$term->name}' class='{$term->slug}'>";
-	$html .= "{$term->name}</a> <span>[{$term->count}]</span></h6>";
+	$html .= "<div><a href='{$tag_link}' title='View all content assigned to {$term->name}' class='{$term->slug}'>";
+	$html .= "{$term->name}</a> <span>[{$term->count}]</span></div>";
 	}
 	$html .= '</div>';
 	echo $html;
-	echo '</aside>';
+	echo '</div>';
 
 //check if we're on the a resources archive page, an individual resource page or a resource_cat archive page.
 }  else if ( is_post_type_archive('resources') || is_singular('resources') || is_tax('resource_cat')) {
 
-	echo '<aside class="columns" role="complementary">';
+	echo '<div class="columns">';
 	$terms = get_terms('resource_cat');
-	$html = '<div class="latest_posts"><h5>Filter Resources</h5>';
+	$html = '<div class="latest_posts"><h3 class="h5">Filter Resources</h3>';
 	foreach ( $terms as $term ) {
 	$tag_link = get_tag_link( $term->term_id );
 
-	$html .= "<h6><a href='{$tag_link}' title='View all content assigned to {$term->name}' class='{$term->slug}'>";
-	$html .= "{$term->name}</a> <span>[{$term->count}]</span></h6>";
+	$html .= "<div><a href='{$tag_link}' title='View all content assigned to {$term->name}' class='{$term->slug}'>";
+	$html .= "{$term->name}</a> <span>[{$term->count}]</span></div>";
 	}
 	$html .= '</div>';
 	echo $html;
-	echo '</aside>';
+	echo '</div>';
 //check if we're on an author poage
 } else if (is_author()) {
 	get_template_part( 'parts/loop', 'researcher-links' );

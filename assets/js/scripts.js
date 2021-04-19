@@ -47,4 +47,12 @@ jQuery(document).ready(function() {
 		return false;
 	});
 
+  var accords = document.querySelectorAll('.is-accordion-submenu'), i;
+
+console.log(accords);
+
+for (i = 0; i < accords.length; ++i) {
+accords[i].setAttribute("role", "none");
+}
+
 });

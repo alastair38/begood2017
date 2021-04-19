@@ -1,7 +1,7 @@
 <?php if ( is_user_logged_in())
 {?>
 <div class="fixed-action-btn vertical click-to-toggle show-for-medium" style="bottom: 45px; right: 24px;">
-	<a class="btn-floating btn-large waves-effect waves-circle red ">
+	<a class="btn-floating btn-large waves-effect waves-circle grey darken-3 ">
 		<i class="material-icons" aria-hidden="true">apps</i>
 	</a>
 	<ul>

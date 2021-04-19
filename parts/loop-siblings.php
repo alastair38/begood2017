@@ -3,13 +3,16 @@
 if($post->post_parent ){
 ?>
 
-<div id="parent-<?php the_ID(); ?>" class="resources-links">
+<div class="resources-links">
 
-		<h3><a href="<?php the_permalink($post->post_parent); ?>" title="<?php the_title($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></h3>
+		<h2 class="h3"><a href="<?php the_permalink($post->post_parent); ?>" title="<?php the_title($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></h2>
 
+		<div class="resources_desc">
 			<?php
 			echo get_the_excerpt($post->post_parent);
 			?>
+		</div>
+
 
 </div>
 <?php }
@@ -33,7 +36,7 @@ $args = array(
 );
 $pages = get_pages($args);
 foreach ($pages as $page) {
-	echo '<div class="resources-links"><h3><a href="' . get_page_link( $page->ID ) .'">' . $page->post_title . '</a></h3><p>' . $page->post_excerpt . '
+	echo '<div class="resources-links"><h2 class="h3"><a href="' . get_page_link( $page->ID ) .'">' . $page->post_title . '</a></h2><p class="resources_desc">' . $page->post_excerpt . '
 
 	</p></div>';
 }

@@ -6,11 +6,11 @@ Template Name: Game Landing Page
 
 <?php get_header(); ?>
 
-	<div id="game-content">
+	<main id="game-content">
 
 		<div id="inner-content" class="row">
 
-		    <main id="main" class="" role="main">
+		    <div id="main">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -19,12 +19,12 @@ Template Name: Game Landing Page
 
 			    <?php endwhile; endif; ?>
 
-			</main> <!-- end #main -->
+			</div> <!-- end #main -->
 
 		    <?php //get_sidebar(); ?>
 
 		</div> <!-- end #inner-content -->
 
-	</div> <!-- end #content -->
+	</main> <!-- end #content -->
 
 <?php get_footer(); ?>

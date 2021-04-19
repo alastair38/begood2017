@@ -11,7 +11,7 @@
 	);
 
 	$lastposts = get_posts( $args );
-	echo '<h4>The Blog</h4>';
+	echo '<h2 class="h4">The Blog</h2>';
 	foreach ( $lastposts as $post ) :
 		setup_postdata( $post );
 	// 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -20,7 +20,7 @@
 	// 	if ( $eventDate >= $currentDate ) : ?>
 
 		 <article>
-			 <h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+			 <h3 class="h5"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3 class="h5">
 			 <span class="byline">
 			 	Published <time
 			     datetime="<?php the_time('Y-m-d') ?>"

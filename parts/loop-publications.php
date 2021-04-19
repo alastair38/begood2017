@@ -17,7 +17,7 @@
 
 	$lastpublications = get_posts( $args );
 	if($lastpublications){
-		echo '<h4>Latest Publications</h4>';
+		echo '<h2 class="h4">Latest Publications</h2>';
 	foreach ( $lastpublications as $post ) :
 		setup_postdata( $post );
 	// 	$eventDate = DateTime::createFromFormat('Ymd', get_field('event_date'));
@@ -26,7 +26,7 @@
 	// 	if ( $eventDate >= $currentDate ) : ?>
 
 	<article>
-		 <h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+		 <h3 class="h5"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 		 <span class="byline">
 		 	Published <time
 		     datetime="<?php the_time('Y-m-d') ?>"
@@ -42,7 +42,7 @@
 	endforeach;
 	wp_reset_postdata(); }
 	else {
-		echo '<h5 class="show-for-large">Latest Publications</h5><p class="show-for-large">
+		echo '<h3 class="h5 show-for-large">Latest Publications</h3><p class="show-for-large">
 		Our latest publications will appear here soon
 		</p>';
 	} ?>

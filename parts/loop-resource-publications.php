@@ -21,7 +21,7 @@
 
 	$lastpublications = get_posts( $args );
 	if($lastpublications){
-		echo '<h5 class="row">Latest Publications</h5>';
+		echo '<h2 class="h5 row">Latest Publications</h2>';
 	}
 	foreach ( $lastpublications as $post ) :
 		setup_postdata( $post );
@@ -31,7 +31,7 @@
 	// 	if ( $eventDate >= $currentDate ) : ?>
 
 	<article class="large-6 medium-6 small-12 columns end">
-		 <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+		 <h3 class="h4"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
 		 <p class="byline">
 		 	Published <time
 		     datetime="<?php the_time('Y-m-d') ?>"

@@ -10,7 +10,7 @@ function site_scripts() {
 
     // Load Slick JS files in footer - front page only
     if (is_front_page()) {
-    wp_enqueue_script( 'owl-carousel', 'https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js', array('jquery'), '', true );
+    wp_enqueue_script( 'owl-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '', true );
     }
 
     if (is_front_page()) {

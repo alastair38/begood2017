@@ -6,11 +6,11 @@ Template Name: Tracing Tomorrow General
 
 get_header(); ?>
 
-	<div id="content">
+	<main id="content">
 
 		<div id="inner-content" class="row">
 
-		    <main id="main" class="large-12 columns" role="main">
+		    <div id="main" class="large-12 columns">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -19,12 +19,12 @@ get_header(); ?>
 
 			    <?php endwhile; endif; ?>
 
-			</main> <!-- end #main -->
+			</div> <!-- end #main -->
 
 
 
 		</div> <!-- end #inner-content -->
 
-	</div> <!-- end #content -->
+	</main> <!-- end #content -->
 
 <?php get_footer(); ?>

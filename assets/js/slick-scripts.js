@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
 
   jQuery(".carousel").slick({
-    dots: true,
+    dots: false,
     autoplay: true,
     infinite: true,
     autoplaySpeed: 5000,

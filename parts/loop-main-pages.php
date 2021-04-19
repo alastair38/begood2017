@@ -12,7 +12,7 @@
 					<div class="large-4 medium-12 columns end">
 					<div class="home-links">
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<?php echo the_field('project_description');?></div>
+					<div class="snippet"><?php echo the_field('project_description');?></div></div>
 					</div>
 
 	    <?php endforeach; ?>
