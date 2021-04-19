@@ -4002,6 +4002,8 @@ POSTS & CONTENT STYLES
   margin-top: 2em;
   border-left: 8px solid #3adb76; }
 
+.related_posts article {
+  margin-bottom: 1rem; }
 .related_posts.columns {
   border: 1px solid #cacaca;
   padding: 1rem;
@@ -4009,10 +4011,15 @@ POSTS & CONTENT STYLES
   .related_posts.columns .h5 {
     text-align: center;
     background: #e6e6e6; }
+  .related_posts.columns h3 {
+    font-size: 1.25rem; }
 
 .latest_tweets .h4 {
   text-align: center;
   background: #e6e6e6; }
+
+#ctf .ctf-tweet-actions a.ctf-like, #ctf .ctf-tweet-actions a.ctf-reply, #ctf .ctf-tweet-actions a.ctf-retweet {
+  color: rgba(0, 0, 0, 0.7); }
 
 .latest_posts .h4, .latest_pubs .h4, .latest_links .h4 {
   text-align: center;
@@ -4310,6 +4317,8 @@ i.fa.fa-external-link {
       color: #fefefe; }
       .home-links h3 a:hover, .home-links h3 a:focus, .home-links .h3 a:hover, .home-links .h3 a:focus, .about-links h3 a:hover, .about-links h3 a:focus, .about-links .h3 a:hover, .about-links .h3 a:focus, .researcher-links h3 a:hover, .researcher-links h3 a:focus, .researcher-links .h3 a:hover, .researcher-links .h3 a:focus, #sidebar1 .resources-links h3 a:hover, #sidebar1 .resources-links h3 a:focus, #sidebar1 .resources-links .h3 a:hover, #sidebar1 .resources-links .h3 a:focus {
         color: #CFD8DC; }
+  .home-links .h3, .about-links .h3, .researcher-links .h3, #sidebar1 .resources-links .h3 {
+    font-size: 1.5625rem; }
   .home-links h3:after, .about-links h3:after, .researcher-links h3:after, #sidebar1 .resources-links h3:after {
     content: '';
     position: absolute;

@@ -675,6 +675,9 @@ POSTS & CONTENT STYLES
 }
 
 .related_posts {
+  article {
+    margin-bottom: 1rem;
+  }
   &.columns {
     border: 1px solid $medium-gray;
     padding: 1rem;
@@ -682,6 +685,9 @@ POSTS & CONTENT STYLES
     .h5 {
       text-align: center;
       background: $light-gray;
+    }
+    h3 {
+      font-size: 1.25rem;
     }
   }
 
@@ -692,6 +698,10 @@ POSTS & CONTENT STYLES
     text-align: center;
     background: $light-gray;
   }
+}
+
+#ctf .ctf-tweet-actions a.ctf-like, #ctf .ctf-tweet-actions a.ctf-reply, #ctf .ctf-tweet-actions a.ctf-retweet {
+	color: rgba(0,0,0, 0.7);
 }
 
 .latest_posts, .latest_pubs, .latest_links {
@@ -1080,6 +1090,9 @@ object-fit: cover;
 		}
 
 	}
+  .h3 {
+    font-size: 1.5625rem;
+  }
 	h3:after {
 		content: '';
 		position: absolute;

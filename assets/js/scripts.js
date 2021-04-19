@@ -49,10 +49,13 @@ jQuery(document).ready(function() {
 
   var accords = document.querySelectorAll('.is-accordion-submenu'), i;
 
-console.log(accords);
 
 for (i = 0; i < accords.length; ++i) {
 accords[i].setAttribute("role", "none");
 }
+
+var mainMenu = document.getElementById('menu-main-1');
+
+mainMenu.removeAttribute("aria-multiselectable");
 
 });
