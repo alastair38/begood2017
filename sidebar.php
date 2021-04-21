@@ -22,7 +22,7 @@ if ( has_post_thumbnail()  &&  is_single() || is_page_template( 'page-researcher
 	//also check for a parent page and link to this if true
 	if($post->post_parent ){
 	?>
-	<div id="parent-<?php the_ID(); ?>" class="resources-links">
+	<div class="resources-links">
 
 			<h3><a href="<?php the_permalink($post->post_parent); ?>" title="<?php echo get_the_title($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></h3>
 			<?php

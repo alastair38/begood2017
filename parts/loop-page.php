@@ -69,7 +69,7 @@
  		?>
 
  					<div class="resources-links">
- 					<h3 class="title"><?php the_sub_field('upcoming_meeting_title');?></h3>
+ 					<h2 class="h3 title"><?php the_sub_field('upcoming_meeting_title');?></h2>
  					<label>
 						<i class="fa fa-calendar"></i>
 						<?php $date = get_sub_field('upcoming_meeting_date');
