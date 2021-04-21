@@ -34,7 +34,7 @@
 
 		<?php //joints_footer_links(); ?>
 	</div>
-	<div class="main-menu large-12 columns show-for-large" role="navigation">
+	<div class="main-menu large-12 columns show-for-large" role="navigation" aria-label="Main site navigation">
 		<?php joints_top_nav(); ?>
 	</div>
 

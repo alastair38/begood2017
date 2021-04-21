@@ -1,5 +1,5 @@
 
-	<span id="mobile-navigation" role="navigation" class="hide-for-large">
+	<span id="mobile-navigation" role="navigation" aria-label="Main site navigation - mobile devices" class="hide-for-large">
 
 	<button id="nav-toggle" aria-label="Open mobile navigation" class="menu-icon dark right" type="button" data-toggle="off-canvas"></button>
 
