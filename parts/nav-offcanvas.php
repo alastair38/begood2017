@@ -1,3 +1,15 @@
+<div class="off-canvas-wrapper">
+
+<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+ <div class="off-canvas-content" data-off-canvas-content>
+
+	 <?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+
+</div>     <!--    end .off-canvas-wrapper-inner -->
+</div>     <!--    end .off-canvas-wrapper -->
+</div>
+
 <div class="top-bar" id="top-bar-menu">
 	<div class="top-bar-left float-left">
 		<ul class="menu">
@@ -22,14 +34,11 @@
 
 		<?php //joints_footer_links(); ?>
 	</div>
-	<div class="main-menu large-12 columns show-for-large">
+	<div class="main-menu large-12 columns show-for-large" role="navigation">
 		<?php joints_top_nav(); ?>
 	</div>
 
-	<div class="top-bar-right float-right hide-for-large">
-		<ul class="menu">
-			<li><button class="menu-icon dark" type="button" data-toggle="off-canvas"></button></li>
-			<!-- <li class="menu-button"><a data-toggle="off-canvas">MENU</a></li> -->
-		</ul>
-	</div>
+
+
+
 </div>

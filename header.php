@@ -59,18 +59,7 @@
 
 <body <?php body_class(); ?>>
   <header class="header" role="banner">
-    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
-		 <div class="off-canvas-wrapper">
-
-		 <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-
-     	<div class="off-canvas-content" data-off-canvas-content>
-
-				<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
-
-    </div>     <!--    end .off-canvas-wrapper-inner -->
-    </div>     <!--    end .off-canvas-wrapper -->
-  </div>
+    <a class="skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
 
 						 <!-- This navs will be applied to the topbar, above all content
 							  To see additional nav styles, visit the /parts directory -->
