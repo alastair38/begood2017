@@ -4149,7 +4149,8 @@ i.fa.fa-external-link {
 .entry-content ul {
   margin-left: 0; }
   .entry-content ul li {
-    padding: .5em 0em; }
+    padding: .5em 0em;
+    list-style-type: inherit; }
 
 .wp-post-image {
   margin-bottom: 1em; }
@@ -4580,6 +4581,9 @@ ul.share-links {
   ul.share-links li {
     display: inline-table;
     padding: 0 .5rem; }
+
+.page-template-page-ypag ul.share-links {
+  margin-top: .5rem; }
 
 /*********************
 IMAGE GALLERY STYLES

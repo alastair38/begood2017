@@ -50,7 +50,7 @@
 
 	if( $images ): ?>
 	<div class="row">
-	 <h5 class="center light">Meeting photos</h5>
+	 <h2 class="h5 center light">Meeting photos</h2>
 		 <?php foreach( $images as $image ): ?>
 				 <div class="small-6 large-4 columns">
 

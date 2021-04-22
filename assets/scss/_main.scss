@@ -891,6 +891,7 @@ i.fa.fa-external-link {
   margin-left: 0;
   li {
     padding: .5em 0em;
+    list-style-type: inherit;
   }
 }
 
@@ -1423,6 +1424,11 @@ ul.share-links {
   }
 }
 
+.page-template-page-ypag {
+  ul.share-links {
+    margin-top: .5rem;
+  }
+}
 
 /*********************
 IMAGE GALLERY STYLES

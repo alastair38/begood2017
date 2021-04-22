@@ -22,7 +22,7 @@ if ( $parent->have_posts() ) : ?>
 						<?php the_post_thumbnail('thumb'); ?>
 					</header>
 					<section class="child-content" itemprop="articleBody">
-						<?php the_excerpt(); ?>
+						<?php echo wp_trim_words( get_the_content(), 55, '...' );?>
 					</section>
 				<?php get_template_part( 'parts/content', 'share' ); ?>
 				</article>
