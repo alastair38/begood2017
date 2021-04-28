@@ -10,7 +10,7 @@
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta class="foundation-mq">
+		<meta name="framework" class="foundation-mq">
 
     <?php if ( is_page_template( 'page-game.php' ) ) {
 

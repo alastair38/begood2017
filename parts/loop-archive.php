@@ -7,10 +7,10 @@
 			<?php get_template_part( 'parts/content', 'byline' ); ?>
 			<?php the_post_thumbnail('thumb'); ?>
 		</header>
-		<section class="entry-content" itemprop="articleBody">
+		<div class="entry-content">
 			<?php the_excerpt(); ?>
 			<a aria-label="<?php the_title(); ?>" class="button" href="<?php echo $eventInfo; ?>" target="_blank" rel="bookmark" title="<?php the_title_attribute(); ?> - This takes you to an external website">More Details</a>
-		</section> <!-- end article section -->
+		</div>
 		<?php get_template_part( 'parts/content', 'share-news' ); ?>
 		<?php } else {?>
 		<header class="article-header">
@@ -18,15 +18,15 @@
 
 		<?php get_template_part( 'parts/content', 'byline' ); ?>
 		<?php the_post_thumbnail('thumb'); ?>
-	</header> <!-- end article header -->
+	</header>
 
-	<section class="entry-content" itemprop="articleBody">
+	<div class="entry-content" >
 		<?php echo wp_trim_words( get_the_content(), 40, '...' ); ?>
-	</section> <!-- end article section -->
+	</div>
 
 	<footer class="article-footer">
     	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
-	</footer> <!-- end article footer -->
+	</footer>
 	<?php get_template_part( 'parts/content', 'share' ); ?>
 	<?php }?>
-</article> <!-- end article -->
+</article>

@@ -10,22 +10,22 @@
 
 					<header class="article-header">
 						<h1><?php _e("Article Not Found", "jointswp"); ?></h1>
-					</header> <!-- end article header -->
+					</header>
 
-					<section class="entry-content">
+					<div class="entry-content">
 						<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "jointswp"); ?></p>
-					</section> <!-- end article section -->
+					</div>
 
-					<section class="search">
+					<div class="search">
 					    <p><?php get_search_form(); ?></p>
-					</section> <!-- end search section -->
+					</div>
 
-				</article> <!-- end article -->
+				</article>
 
-			</div> <!-- end #main -->
+			</div>
 
-		</div> <!-- end #inner-content -->
+		</div>
 
-	</main> <!-- end #content -->
+	</main>
 
 <?php get_footer(); ?>

@@ -9,10 +9,10 @@
 		if ( $qualifications ) {
 			echo '<strong>' . $qualifications . '</strong>';
 	}?>
-	</header> <!-- end article header -->
+	</header>
 
 
-    <section class="entry-content" itemprop="articleBody">
+    <div class="entry-content">
 			<?php
 	     the_content(); ?>
 			 <?php
@@ -51,7 +51,7 @@
 
  					<div class="resources-links">
  					<h2 class="h3 title"><?php the_sub_field('upcoming_meeting_title');?></h2>
- 					<label>
+ 					<span class="meta-label">
 						<i class="fa fa-calendar"></i>
 						<?php $date = get_sub_field('upcoming_meeting_date');
 						$address = get_sub_field('upcoming_meeting_address');
@@ -61,7 +61,7 @@
 							echo ' at ' . $address;
 						}?>
 
- 					</label>
+ 					</span>
 
  							<?php $description = get_sub_field('upcoming_meeting_description');
 							if ($description) {
@@ -70,7 +70,7 @@
 
 							<?php $meeting_image = get_sub_field('upcoming_meeting_image');
 							if ($meeting_image){
-								echo '<img src="' . $meeting_image . '"/></br>';
+								echo '<img src="' . $meeting_image . '" alt="Photograph of ' .  the_sub_field('upcoming_meeting_title') . '"/></br>';
 							}?>
 
 
@@ -94,11 +94,11 @@
  			endif;
  		?>
 	    <?php wp_link_pages(); ?>
-	</section> <!-- end article section -->
+	</div>
 
 
 
-</article> <!-- end article -->
+</article>
 
 <div class="profile-img large-3 columns">
 	<figure>

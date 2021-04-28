@@ -8,10 +8,10 @@
 		<div id="bar1">
 			<?php the_post_thumbnail('medium');?>
 		</div>
-	</header> <!-- end article header -->
+	</header>
 
 
-    <section class="entry-content" itemprop="articleBody">
+    <div class="entry-content">
 
 			<?php
 			echo '<p id="request-msg">' . get_field('pre_form_text') . '</p>';
@@ -138,10 +138,6 @@ elms = document.getElementsByName('nf-field-5');
 
 
 			</script>
-	</section> <!-- end article section -->
+	</div>
 
-	<footer class="article-footer">
-
-	</footer> <!-- end article footer -->
-
-</article> <!-- end article -->
+</article>

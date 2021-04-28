@@ -18,18 +18,18 @@ Template Name: Home
 
 		    <div id="main" class="large-12 medium-12 columns">
 
-					<section class="entry-content large-12 columns" itemprop="articleBody">
+					<div class="entry-content large-12 columns" >
 						<?php the_content(); ?>
 						<?php wp_link_pages(); ?>
 
-				</section> <!-- end article section -->
+				</div>
 
 			<?php endwhile; endif; ?>
 
 
 
 
-		</div> <!-- end #main -->
+		</div>
 
 
 	<div class="aside large-12 medium-12 columns">
@@ -64,10 +64,10 @@ Template Name: Home
 </div>
 
 
-		</div> <!-- end #inner-content -->
+		</div>
 
 
 
-	</main> <!-- end #content -->
+	</main>
 
 <?php get_footer(); ?>

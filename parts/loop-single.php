@@ -4,9 +4,9 @@
 		<?php edit_post_link('Edit Post', '<span class="edit_link waves-effect waves-light">', '</span>'); ?>
 		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 		<?php get_template_part( 'parts/content', 'byline' ); ?>
-    </header> <!-- end article header -->
+    </header>
 
-    <section class="entry-content" itemprop="articleBody">
+    <div class="entry-content" >
 		<?php
 
 		//seems to work to do this delete_field('details_of_meetings');
@@ -21,12 +21,12 @@
 	}?>
 
 
-	</section> <!-- end article section -->
+</div>
 
 	<footer class="article-footer">
 <p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
 
-	</footer> <!-- end article footer -->
+	</footer>
 		<?php get_template_part( 'parts/content', 'share' ); ?>
 	<?php
 	if (is_singular( 'post' )) {
@@ -35,4 +35,4 @@
 	//only show comments template on single posts NOT custom post types
 	 ?>
 
-</article> <!-- end article -->
+</article>

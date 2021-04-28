@@ -1,4 +1,4 @@
-<!-- <article id="post-<?php the_ID(); ?>" class="large-12 medium-7 columns" role="article" itemscope itemtype="http://schema.org/WebPage"> -->
+
 
 <div class="carousel">
 
@@ -46,5 +46,3 @@
 	wp_reset_postdata(); ?>
 
 </div>
-
-<!-- </article> <!-- end article -->

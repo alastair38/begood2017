@@ -45,5 +45,3 @@ endif;
 	?>
 
 </div>
-
-<!-- </article> <!-- end article -->

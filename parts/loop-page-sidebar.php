@@ -9,16 +9,16 @@
 		if ( $qualifications ) {
 			echo '<strong>' . $qualifications . '</strong>';
 	}?>
-	</header> <!-- end article header -->
+	</header>
 
 
-    <section class="entry-content" itemprop="articleBody">
+    <div class="entry-content">
 			<?php
 	     the_content(); ?>
 	    <?php wp_link_pages(); ?>
-	</section> <!-- end article section -->
+	</div>
 
-</article> <!-- end article -->
+</article>
 
 <?php
 

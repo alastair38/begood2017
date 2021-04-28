@@ -1108,6 +1108,15 @@ object-fit: cover;
   }
 }
 
+.meta-label {
+  display: block;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.8;
+  color: #0a0a0a;
+}
+
 .home-links, .about-links, .researcher-links, #sidebar1 .resources-links {
 	background: $highlight-color;
 	margin: 1em 0;

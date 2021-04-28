@@ -9,10 +9,10 @@
 		if ( $qualifications ) {
 			echo '<strong>' . $qualifications . '</strong>';
 	}?>
-	</header> <!-- end article header -->
+	</header>
 
 
-    <section class="entry-content" itemprop="articleBody">
+    <div class="entry-content">
 			<?php
 	     the_content(); ?>
 			 <?php
@@ -36,7 +36,7 @@
 <?php endif;
 
 			 if ( get_field('publications')) {
-				 echo '<h4>Publications</h4>';
+				 echo '<h2 class="h5">Publications</h2>';
 				 the_field('publications');
 		 }
 
@@ -70,7 +70,7 @@
 
  					<div class="resources-links">
  					<h2 class="h3 title"><?php the_sub_field('upcoming_meeting_title');?></h2>
- 					<label>
+ 					<span class="meta-label">
 						<i class="fa fa-calendar"></i>
 						<?php $date = get_sub_field('upcoming_meeting_date');
 						$address = get_sub_field('upcoming_meeting_address');
@@ -80,7 +80,7 @@
 							echo ' at ' . $address;
 						}?>
 
- 					</label>
+ 					</span>
 
  							<?php $description = get_sub_field('upcoming_meeting_description');
 							if ($description) {
@@ -89,7 +89,7 @@
 
 							<?php $meeting_image = get_sub_field('upcoming_meeting_image');
 							if ($meeting_image){
-								echo '<img src="' . $meeting_image . '"/></br>';
+								echo '<img src="' . $meeting_image . '" alt="Photograph of ' . the_sub_field('upcoming_meeting_title') . '"/></br>';
 							}?>
 
 
@@ -113,10 +113,6 @@
  			endif;
  		?>
 	    <?php wp_link_pages(); ?>
-	</section> <!-- end article section -->
+	</div>
 
-	<footer class="article-footer">
-
-	</footer> <!-- end article footer -->
-
-</article> <!-- end article -->
+</article>

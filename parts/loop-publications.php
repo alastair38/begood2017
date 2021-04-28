@@ -42,7 +42,7 @@
 	endforeach;
 	wp_reset_postdata(); }
 	else {
-		echo '<h3 class="h5 show-for-large">Latest Publications</h3><p class="show-for-large">
+		echo '<h2 class="h4 show-for-large">Latest Publications</h2><p class="show-for-large">
 		Our latest publications will appear here soon
 		</p>';
 	} ?>
