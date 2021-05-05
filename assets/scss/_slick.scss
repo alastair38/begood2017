@@ -260,6 +260,10 @@ button.slick-autoplay-toggle-button {
               height: 15px;
             }
           }
+          button:focus span.slick-dot-icon {
+            outline: 2px solid blue;
+            outline-offset: 1px;
+          }
         }
         span.slick-dot-icon {
           background: blue;
@@ -271,6 +275,10 @@ button.slick-autoplay-toggle-button {
             width: 15px;
             height: 15px;
           }
+      }
+      button:focus span.slick-dot-icon {
+        outline: 2px solid blue;
+        outline-offset: 1px;
       }
     }
 }

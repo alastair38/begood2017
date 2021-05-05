@@ -3592,6 +3592,9 @@ button.slick-autoplay-toggle-button {
         .slick-dots li.slick-active span.slick-dot-icon {
           width: 15px;
           height: 15px; } }
+    .slick-dots li.slick-active button:focus span.slick-dot-icon {
+      outline: 2px solid blue;
+      outline-offset: 1px; }
     .slick-dots li span.slick-dot-icon {
       background: blue;
       display: inline-block;
@@ -3602,6 +3605,9 @@ button.slick-autoplay-toggle-button {
         .slick-dots li span.slick-dot-icon {
           width: 15px;
           height: 15px; } }
+    .slick-dots li button:focus span.slick-dot-icon {
+      outline: 2px solid blue;
+      outline-offset: 1px; }
 
 /************************************************
 
