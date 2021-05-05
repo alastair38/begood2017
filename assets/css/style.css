@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************************************
 
 Stylesheet: Main Stylesheet
@@ -3389,81 +3390,218 @@ body {
 
   .top-bar-right {
     float: right; } }
-/* Slider Styles */
-.slick-slider {
+.carousel {
+  background: #444;
+  animation: show 2300ms 1;
   position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent; }
+  width: 100%; }
+  .carousel a {
+    color: #004f8e; }
+  .carousel .slide-bg {
+    height: 400px; }
+  .carousel.fullscreen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .carousel.fullscreen ul.slides {
+      height: 100%; }
+    .carousel.fullscreen ul.indicators {
+      z-index: 2;
+      bottom: 30px; }
+  .carousel .slides {
+    background-color: color("grey", "darken-4");
+    margin: 0;
+    height: 400px; }
+    .carousel .slides li {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: inherit;
+      overflow: hidden; }
+      .carousel .slides li img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center; }
+      .carousel .slides li .caption {
+        color: #fff;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        opacity: 0; }
+      .carousel .slides li.active {
+        z-index: 2; }
 
-.slick-list {
-  position: relative;
-  overflow: hidden;
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-family: 'Material Icons';
+  position: absolute;
   display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  z-index: 99;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none; }
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    outline: none;
+    background: transparent;
+    color: transparent; }
+    .slick-prev:hover:before, .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+      opacity: 1; }
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0.25; }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: inherit;
+    font-size: 30px;
+    line-height: 1;
+    color: tomato;
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+button.slick-autoplay-toggle-button {
+  position: absolute;
+  bottom: 15px;
+  left: 8%;
+  z-index: 100;
+  border-radius: 3px;
+  background: #ffffff; }
+  button.slick-autoplay-toggle-button:focus {
+    outline: 4px solid blue;
+    outline-offset: 2px; }
+  button.slick-autoplay-toggle-button span {
+    line-height: 1.25;
+    padding: 0 .25rem;
+    font-size: 18px; }
+    @media screen and (min-width: 62.5em) {
+      button.slick-autoplay-toggle-button span {
+        line-height: 1.5;
+        padding: 0 .5rem;
+        font-size: 24px; } }
+
+.slider-button {
+  position: absolute;
+  bottom: 15px;
+  z-index: 100;
+  border-radius: 3px;
+  background: #ffffff; }
+  .slider-button:focus {
+    outline: 4px solid blue;
+    outline-offset: 2px;
+    background: #ffffff; }
+  .slider-button.custom-prev-button {
+    left: 19%; }
+    @media screen and (min-width: 32em) {
+      .slider-button.custom-prev-button {
+        left: 16%; } }
+    @media screen and (min-width: 62.5em) {
+      .slider-button.custom-prev-button {
+        left: 12%; } }
+  .slider-button.custom-next-button {
+    left: 30%; }
+    @media screen and (min-width: 32em) {
+      .slider-button.custom-next-button {
+        left: 24%; } }
+    @media screen and (min-width: 62.5em) {
+      .slider-button.custom-next-button {
+        left: 16%; } }
+  .slider-button span {
+    line-height: 1.25;
+    padding: 0 .25rem;
+    font-size: 18px; }
+    @media screen and (min-width: 62.5em) {
+      .slider-button span {
+        line-height: 1.5;
+        padding: 0 .5rem;
+        font-size: 24px; } }
+
+.slick-prev {
+  left: 15px; }
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: 15px; }
+  .slick-prev:before {
+    content: ""; }
+    [dir="rtl"] .slick-prev:before {
+      content: ""; }
+
+.slick-next {
+  right: 15px; }
+  [dir="rtl"] .slick-next {
+    left: 15px;
+    right: auto; }
+  .slick-next:before {
+    content: ""; }
+    [dir="rtl"] .slick-next:before {
+      content: ""; }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: 5px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
   margin: 0;
-  padding: 0; }
-  .slick-list:focus {
-    outline: none; }
-  .slick-list.dragging {
-    cursor: pointer;
-    cursor: hand; }
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block; }
-  .slick-track:before, .slick-track:after {
-    content: "";
-    display: table; }
-  .slick-track:after {
-    clear: both; }
-  .slick-loading .slick-track {
-    visibility: hidden; }
-
-.slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none; }
-  [dir="rtl"] .slick-slide {
-    float: right; }
-  .slick-slide img {
-    display: block; }
-  .slick-slide.slick-loading img {
-    display: none; }
-  .slick-slide.dragging img {
-    pointer-events: none; }
-  .slick-initialized .slick-slide {
-    display: block; }
-  .slick-loading .slick-slide {
-    visibility: hidden; }
-  .slick-vertical .slick-slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent; }
-
-.slick-arrow.slick-hidden {
-  display: none; }
-
-.slick-arrow i {
-  color: white; }
+  width: 100%; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      border: none;
+      background: none; }
+    .slick-dots li.slick-active span.slick-dot-icon {
+      background: lightblue;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%; }
+      @media screen and (min-width: 62.5em) {
+        .slick-dots li.slick-active span.slick-dot-icon {
+          width: 15px;
+          height: 15px; } }
+    .slick-dots li span.slick-dot-icon {
+      background: blue;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%; }
+      @media screen and (min-width: 62.5em) {
+        .slick-dots li span.slick-dot-icon {
+          width: 15px;
+          height: 15px; } }
 
 /************************************************
 
@@ -3512,7 +3650,7 @@ ANIMATION
 /*********************
 GENERAL STYLES
 *********************/
-.screen-reader-text {
+.screen-reader-text, .slick-sr-only {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
@@ -4335,6 +4473,14 @@ i.fa.fa-external-link {
       border-bottom: 1px solid transparent;
       transition: 350ms; }
 
+.meta-label {
+  display: block;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.8;
+  color: #0a0a0a; }
+
 .home-links, .about-links, .researcher-links, #sidebar1 .resources-links {
   background: #004f8e;
   margin: 1em 0;
@@ -4456,42 +4602,6 @@ i.fa.fa-external-link {
 /*********************
 CAROUSEL STYLES
 *********************/
-.slick-dots {
-  position: absolute;
-  bottom: -45px;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-left: 0;
-  list-style: none;
-  text-align: center; }
-
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  border-radius: 50%;
-  padding: 0;
-  cursor: pointer; }
-
-.slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  padding: 5px;
-  cursor: pointer;
-  border: 0;
-  outline: none;
-  background: #e6e6e6; }
-
-.slick-dots li.slick-active button {
-  background: #004f8e; }
-
 .carousel {
   position: relative;
   height: 200px;
@@ -4508,28 +4618,25 @@ CAROUSEL STYLES
     position: absolute;
     font-size: .75em;
     background: rgba(255, 255, 255, 0.9);
-    bottom: 1rem;
-    left: 10%;
+    bottom: 25%;
+    left: 8%;
     padding: .5rem 2rem;
     border-radius: 3px;
     max-width: 80%; }
-    @media screen and (min-width: 62.5em) {
-      .carousel article {
-        bottom: 2rem; } }
     .carousel article h2 {
       font-size: 1rem;
       margin-bottom: 0; }
     @media screen and (min-width: 32em) {
       .carousel article {
-        font-size: 1em;
-        bottom: 2rem; }
+        font-size: 1em; }
         .carousel article h2 {
           font-size: 1.5rem; } }
     @media screen and (min-width: 62.5em) {
       .carousel article {
         left: 8%;
         max-width: 84%;
-        font-size: 1em; }
+        font-size: 1em;
+        bottom: 20%; }
         .carousel article h2 {
           font-size: 1.75rem; } }
 
@@ -4759,44 +4866,44 @@ place.
 
 ******************************************************************/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /*
-
-  EXAMPLE
+  /* 
+  
+  EXAMPLE 
   Let's say you have an image and you need to make sure it looks ok
   on retina screens. Let's say we have an icon which dimension are
   24px x 24px. In your regular stylesheets, it would look something
   like this:
-
+  
   .icon {
   	width: 24px;
   	height: 24px;
   	background: url(img/test.png) no-repeat;
   }
-
+  
   For retina screens, we have to make some adjustments, so that image
   doesn't look blurry. So, taking into account the image above and the
   dimensions, this is what we would put in our retina stylesheet:
-
+  
   .icon {
   	background: url(img/test@2x.png) no-repeat;
   	background-size: 24px 24px;
   }
-
-  So, you would create the same icon, but at double the resolution, meaning
+  
+  So, you would create the same icon, but at double the resolution, meaning 
   it would be 48px x 48px. You'd name it the same, but with a @2x at the end
   (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go.
-
+  the original dimensions and you are good to go. 
+  
   */ }
 /******************************************************************
 
 Stylesheet: Print Stylesheet
 
 This is the print stylesheet. There's probably not a lot
-of reasons to edit this stylesheet.
+of reasons to edit this stylesheet. 
 
-Remember to add things that won't make sense to print at
-the bottom. Things like nav, ads, and forms shouldbe set
+Remember to add things that won't make sense to print at 
+the bottom. Things like nav, ads, and forms shouldbe set 
 to display none.
 ******************************************************************/
 @media print {

@@ -15,7 +15,8 @@
 			 $members = get_field('member');
 			 if( $members ): ?>
     <ul class="team-grid row">
-    <?php foreach( $members as $post): // variable must be called $post (IMPORTANT) ?>
+    <?php foreach( $members as $post):
+			$affiliation = get_field('affiliation');// variable must be called $post (IMPORTANT) ?>
         <?php setup_postdata($post); ?>
 
         <li class="container large-4 medium-6 columns end">
@@ -24,7 +25,9 @@
 							<div class="overlay">
 								<div class="overlay-content">
 									<h2><?php the_title(); ?></h2>
-	        				<span class="content-text"><?php the_field('affiliation'); ?></span>
+									<?php if($affiliation):?>
+	        				<span class="content-text"><?php echo $affiliation; ?></span>
+									<?php endif;?>
 								</div>
 
       				</div>

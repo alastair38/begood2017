@@ -1,14 +1,20 @@
 jQuery(document).ready(function() {
-
-  jQuery(".carousel").slick({
-    dots: false,
+  jQuery('.carousel').slick({
     autoplay: true,
-    infinite: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 8000,
+    dots: true,
     fade: true,
-    cssEase: 'linear',
-    prevArrow: '<button type="button" class="slick-prev"><i class="material-icons medium">chevron_left</i></button>',
-    nextArrow: '<button type="button" class="slick-next"><i class="material-icons medium">chevron_right</i></button>'
+    arrows: true,
+    arrowsPlacement: 'beforeSlides',
+    prevArrow: '<button type="button" class="slider-button custom-prev-button">'
+               + '<span class="material-icons" aria-hidden="true">chevron_left</span>'
+               + '  <span class="screen-reader-text">Previous slide</span>'
+               + '</button>',
+    nextArrow: '<button type="button" class="slider-button custom-next-button">'
+               + '<span class="material-icons" aria-hidden="true">chevron_right</span>'
+               + '  <span class="screen-reader-text">Next slide</span>'
+               + '</button>',
+    pauseIcon: '<span class="material-icons" aria-hidden="true">pause</span>',
+    playIcon: '<span class="material-icons" aria-hidden="true">play_arrow</span>'
   });
-
 });

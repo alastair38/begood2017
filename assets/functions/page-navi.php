@@ -30,14 +30,19 @@ function joints_page_navi($before = '', $after = '') {
 	if($start_page <= 0) {
 		$start_page = 1;
 	}
+	$prev_page = get_previous_posts_link();
+	$next_page = get_next_posts_link();
+
 	echo $before.'<nav class="page-navigation z-depth-0 white"><ul class="pagination">'."";
 	if ($start_page >= 2 && $pages_to_show < $max_page) {
 		$first_page_text = __( 'First', 'jointswp' );
 		echo '<li><a href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a></li>';
 	}
+	if($prev_page):
 	echo '<li>';
 	previous_posts_link( 'Previous', 'jointswp' );
 	echo '</li>';
+	endif;
 	for($i = $start_page; $i  <= $end_page; $i++) {
 		if($i == $paged) {
 			echo '<li class="current blue lighten-1"> '.$i.' </li>';
@@ -45,9 +50,11 @@ function joints_page_navi($before = '', $after = '') {
 			echo '<li><a href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
 		}
 	}
-	echo '<li>';
-	next_posts_link( 'Next', 'jointswp' );
-	echo '</li>';
+
+	// echo '<li>';
+	// next_posts_link( 'Next', 'jointswp' );
+	// echo '</li>';
+
 	if ($end_page < $max_page) {
 		$last_page_text = __( 'Last', 'jointswp' );
 		echo '<li><a href="'.get_pagenum_link($max_page).'" title="'.$last_page_text.'">'.$last_page_text.'</a></li>';
@@ -56,7 +63,7 @@ function joints_page_navi($before = '', $after = '') {
 } /* End page navi */
 
 /* Relative date function courtesy of Sitepoint http://www.sitepoint.com/counting-the-ago-time-how-to-keep-publish-dates-fresh/ */
-// 
+//
 // define( 'TIMEBEFORE_NOW',         'now' );
 //     define( 'TIMEBEFORE_MINUTE',      '{num} minute ago' );
 //     define( 'TIMEBEFORE_MINUTES',     '{num} minutes ago' );

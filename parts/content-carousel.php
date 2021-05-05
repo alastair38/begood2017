@@ -20,7 +20,7 @@ if( have_rows('front_page_carousel') ):
 		?>
 
 
-				<div style="background: url(<?php echo $image;?>) no-repeat center center; background-size: cover;">
+				<div class="slide-bg" style="background: url(<?php echo $image;?>) no-repeat center center; background-size: cover;">
 
 					 <article class="waves-effect">
 						 <?php if($link) {

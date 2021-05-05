@@ -72,8 +72,9 @@ $tags = get_tags();
 $html = '<div class="columns"><div class="latest_posts"><h3 class="h5">Blog Categories</h3>';
 foreach ( $tags as $tag ) {
 $tag_link = get_tag_link( $tag->term_id );
+$tag_name = esc_attr($tag->name);
 
-$html .= "<div><a href='{$tag_link}' title='View all content assigned to {$tag->name}' class='{$tag->slug}'>";
+$html .= "<div><a href='{$tag_link}' title='View all content assigned to {$tag_name}' class='{$tag->slug}'>";
 $html .= "{$tag->name}</a> <span>[{$tag->count}]</span></div>";
 }
 $html .= '</div></div>';
