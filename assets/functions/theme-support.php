@@ -17,6 +17,7 @@ function joints_theme_support() {
 
 	// Add HTML5 Support
 	add_theme_support( 'html5',
+	        [ 'script', 'style' ],
 	         array(
 	         	'comment-list',
 	         	'comment-form',

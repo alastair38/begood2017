@@ -66,6 +66,17 @@ function begood_add_excerpt_support_for_pages() {
 }
 add_action( 'init', 'begood_add_excerpt_support_for_pages' );
 
+
+function include_cpt_search( $query ) {
+
+	if ( $query->is_search && !is_admin() ) { // added !is_admin() so admin filters don't break
+	$query->set( 'post_type', array( 'post', 'page', 'resources', 'news' ) );
+	}
+
+	return $query;
+
+}
+
 // function to redirect away from Tracing Tomorrow landing page unless the site visitor is coming from the game website (which is defined on the options page).
 
 $enable_redirect = get_field('enable_redirect', 'options');
